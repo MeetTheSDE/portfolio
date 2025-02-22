@@ -1,38 +1,82 @@
-.App {
+/* Light Mode Styles */
+.light-mode {
+  background: linear-gradient(45deg, #ff9a9e, #fad0c4, #fad0c4, #fbc2eb);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #333;
+}
+
+.light-mode button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.light-mode button:hover {
+  background-color: #0056b3;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background: linear-gradient(45deg, #2e3b4e, #4a576f, #2e3b4e);
+  background-size: 400% 400%;
+  animation: gradientAnimation 10s ease infinite;
+  color: #ffffff;
+}
+
+.dark-mode button {
+  background-color: #444;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+.dark-mode button:hover {
+  background-color: #555;
+}
+
+/* Keyframe Animation for the Gradient */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Optional: Add styles for sections */
+div {
+  margin: 20px;
+  padding: 10px;
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.container {
+  width: 80%;
+  max-width: 1200px; /* Prevents it from being too wide on large screens */
+  margin: 0 auto; /* Centers the content */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.section {
+  margin-bottom: 50px; /* Adds spacing between sections */
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+@media (max-width: 768px) {
+  .container {
+    width: 95%; /* Makes it more compact on smaller screens */
   }
 }
