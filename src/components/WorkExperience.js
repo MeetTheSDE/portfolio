@@ -2,19 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import Container from "./Container";
 
-const EducationSection = styled.section`
+const WorkExperienceSection = styled.section`
   background: ${(props) => props.theme.background};
   padding: 40px 0;
 `;
 
-const EducationGrid = styled.div`
+const WorkExperienceGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
   margin-top: 20px;
 `;
 
-const EducationCard = styled.div`
+const WorkExperienceCard = styled.div`
   background: ${(props) => props.theme.cardBackground}; // Use theme for card background
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -57,7 +57,7 @@ const DescriptionItem = styled.li`
   margin-bottom: 5px;
 `;
 
-const Education = () => {
+const WorkExperience = () => {
   const experiences = [
     {
       company: "Tech Innovations Inc.",
@@ -96,11 +96,11 @@ const Education = () => {
 
   return (
     <Container>
-      <EducationSection id="Education">
-        <h2>Education</h2>
-        <EducationGrid>
+      <WorkExperienceSection id="WorkExperience">
+        <h2>Work Experience</h2>
+        <WorkExperienceGrid>
           {experiences.map((experience, index) => (
-            <EducationCard key={index}>
+            <WorkExperienceCard key={index}>
               <CompanyLogo src={experience.logo} alt={experience.company} />
               <CompanyName>{experience.company}</CompanyName>
               <JobTitle>{experience.title}</JobTitle>
@@ -110,12 +110,12 @@ const Education = () => {
                   <DescriptionItem key={itemIndex}>{item}</DescriptionItem>
                 ))}
               </Description>
-            </EducationCard>
+            </WorkExperienceCard>
           ))}
-        </EducationGrid>
-      </EducationSection>
+        </WorkExperienceGrid>
+      </WorkExperienceSection>
     </Container>
   );
 };
 
-export default Education;
+export default WorkExperience;

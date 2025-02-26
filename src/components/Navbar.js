@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-scroll";
-import { FaMoon, FaSun } from "react-icons/fa";
 import styled from "styled-components";
 
 const Nav = styled.nav`
@@ -33,32 +32,17 @@ const NavLinks = styled.ul`
   }
 `;
 
-const Navbar = ({ toggleTheme }) => {
+const Navbar = () => {
   return (
     <Nav>
       <Logo>MyPortfolio</Logo>
       <NavLinks>
-        <li>
-          <Link to="hero" smooth={true} offset={-50}>Home</Link>
-        </li>
-        <li>
-          <Link to="work" smooth={true}>Work</Link>
-        </li>
-        <li>
-          <Link to="projects" smooth={true}>Projects</Link>
-        </li>
-        <li>
-          <Link to="skills" smooth={true}>Skills</Link>
-        </li>
-        <li>
-          <Link to="certifications" smooth={true}>Certifications</Link>
-        </li>
-        <li>
-          <Link to="education" smooth={true}>Education</Link>
-        </li>
-        <li onClick={toggleTheme}>
-          {toggleTheme ? <FaSun size={24} /> : <FaMoon size={24} />}
-        </li>
+        <li><Link to="hero" smooth={true} offset={-50}>Home</Link></li>
+        <li><Link to="WorkExperience" smooth={true} offset={-50}>Work Experience</Link></li>
+		<li><Link to="skills" smooth={true} offset={-50}>Skills</Link></li>
+        <li><Link to="projects" smooth={true} offset={-50}>Projects</Link></li>
+        <li><Link to="Education" smooth={true} offset={-50}>Education</Link></li>
+        <li><Link to="certifications" smooth={true}>Certifications</Link></li>
       </NavLinks>
     </Nav>
   );

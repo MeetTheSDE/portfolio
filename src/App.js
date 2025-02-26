@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Certifications from "./components/Certifications";
 import Education from "./components/Education";
+import WorkExperience from "./components/WorkExperience";
 
 const App = () => {
   const [theme, setTheme] = useState("light");
@@ -20,9 +21,10 @@ const App = () => {
       <GlobalStyle />
       <Navbar toggleTheme={toggleTheme} />
       <Hero />
-      <Education />
-      <Projects />
+	  <WorkExperience />
       <Skills />
+      <Projects />
+      <Education />
       <Certifications />
     </ThemeProvider>
   );

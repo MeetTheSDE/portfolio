@@ -5,7 +5,7 @@ import Container from "./Container";
 // Reusing Skills styled components for Certificates
 const CertificationsSection = styled.section`
   background: ${(props) => props.theme.background};
-  padding: 40px 0;
+//   padding: 20px 0;
 `;
 
 const CertificationsGrid = styled.div`
@@ -68,8 +68,8 @@ const ViewCredentialsTab = styled.div`
   background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 5px 10px;
-  border-radius: 5px;
-  font-size: 0.8em;
+  border-radius: 15px;
+  font-size: 0.9em;
   opacity: 0;
   transition: bottom 0.3s ease, opacity 0.3s ease;
   z-index: 3;
@@ -87,7 +87,7 @@ const Certifications = () => {
 		{
 			src: "/logos/awscp.png",
 			alt: "AWS Certified Practitioner",
-			bgColor: "#ff9900", // AWS color
+			bgColor: "#232F3E", // AWS color
 			credentialLink: "YOUR_CREDENTIAL_LINK",
 		},
 		// Add more certifications here
