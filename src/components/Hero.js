@@ -5,8 +5,27 @@ const Hero = () => {
 	const scrollToWorkExperience = () => {
 		const section = document.getElementById("WorkExperience");
 		if (section) {
-			const topOffset = section.offsetTop - 50;
-			section.scrollIntoView({ top: topOffset, behavior: "smooth" });
+			const targetPosition = section.getBoundingClientRect().top + window.scrollY - 50;
+			const startPosition = window.scrollY;
+			const distance = targetPosition - startPosition;
+			const duration = 1000;
+			let startTime = null;
+
+			const smoothScroll = (currentTime) => {
+				if (!startTime) startTime = currentTime;
+				const timeElapsed = currentTime - startTime;
+				const progress = Math.min(timeElapsed / duration, 1);
+				const easeInOutCubic = progress < 0.5 
+					? 4 * progress * progress * progress 
+					: 1 - Math.pow(-2 * progress + 2, 3) / 2;
+				
+				window.scrollTo(0, startPosition + distance * easeInOutCubic);
+				
+				if (timeElapsed < duration) {
+					requestAnimationFrame(smoothScroll);
+				}
+			};
+			requestAnimationFrame(smoothScroll);
 		}
 	  };
 
