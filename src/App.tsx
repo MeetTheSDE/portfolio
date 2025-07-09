@@ -1,10 +1,13 @@
-import { Switch, Route } from "wouter";
+import { Switch, Route, Router } from "wouter";
+import { useHashLocation } from "wouter/use-hash-location";
+
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
 
-function Router() {
+// This component contains your application's routes
+function AppRoutes() {
     return (
         <Switch>
             <Route path="/" component={Portfolio} />
@@ -17,7 +20,10 @@ function App() {
     return (
         <TooltipProvider>
             <Toaster />
-            <Router />
+            <Router hook={useHashLocation}>
+                {" "}
+                <AppRoutes />
+            </Router>
         </TooltipProvider>
     );
 }
