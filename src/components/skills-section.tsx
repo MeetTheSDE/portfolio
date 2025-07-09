@@ -21,19 +21,19 @@ export default function SkillsSection() {
             image: import.meta.env.BASE_URL + "logos/javascript.png",
         },
         { name: "React", image: import.meta.env.BASE_URL + "logos/react.png" },
-        { name: "Git", image: import.meta.env.BASE_URL + "logos/github.png" },
         {
-            name: "Elasticsearch",
-            image: import.meta.env.BASE_URL + "logos/elasticsearch.png",
-        },
-        { name: "AWS", image: import.meta.env.BASE_URL + "logos/aws.png" },
-        {
-            name: "Jenkins",
-            image: import.meta.env.BASE_URL + "logos/jenkins.png",
+            name: "TypeScript",
+            image: import.meta.env.BASE_URL + "logos/typescript.png",
         },
         {
             name: "Docker",
             image: import.meta.env.BASE_URL + "logos/docker.png",
+        },
+        { name: "AWS", image: import.meta.env.BASE_URL + "logos/aws.png" },
+        { name: "Git", image: import.meta.env.BASE_URL + "logos/github.png" },
+        {
+            name: "Jenkins",
+            image: import.meta.env.BASE_URL + "logos/jenkins.png",
         },
     ];
 
