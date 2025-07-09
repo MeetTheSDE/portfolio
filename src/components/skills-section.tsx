@@ -2,18 +2,39 @@ import { motion } from "framer-motion";
 
 export default function SkillsSection() {
     const skills = [
-        { name: "Python", image: "/logos/python.png" },
-        { name: "Java", image: "/logos/java.png" },
-        { name: "MySQL", image: "/logos/mysql.png" },
-        { name: "PostgreSQL", image: "/logos/postgresql.png" },
-        { name: "Tailwind CSS", image: "/logos/tailwind.png" },
-        { name: "JavaScript", image: "/logos/javascript.png" },
-        { name: "React", image: "/logos/react.png" },
-        { name: "Git", image: "/logos/github.png" },
-        { name: "Elasticsearch", image: "/logos/elasticsearch.png" },
-        { name: "AWS", image: "/logos/aws.png" },
-        { name: "Jenkins", image: "/logos/jenkins.png" },
-        { name: "Docker", image: "/logos/docker.png" },
+        {
+            name: "Python",
+            image: import.meta.env.BASE_URL + "logos/python.png",
+        },
+        { name: "Java", image: import.meta.env.BASE_URL + "logos/java.png" },
+        { name: "MySQL", image: import.meta.env.BASE_URL + "logos/mysql.png" },
+        {
+            name: "PostgreSQL",
+            image: import.meta.env.BASE_URL + "logos/postgresql.png",
+        },
+        {
+            name: "Tailwind CSS",
+            image: import.meta.env.BASE_URL + "logos/tailwind.png",
+        },
+        {
+            name: "JavaScript",
+            image: import.meta.env.BASE_URL + "logos/javascript.png",
+        },
+        { name: "React", image: import.meta.env.BASE_URL + "logos/react.png" },
+        { name: "Git", image: import.meta.env.BASE_URL + "logos/github.png" },
+        {
+            name: "Elasticsearch",
+            image: import.meta.env.BASE_URL + "logos/elasticsearch.png",
+        },
+        { name: "AWS", image: import.meta.env.BASE_URL + "logos/aws.png" },
+        {
+            name: "Jenkins",
+            image: import.meta.env.BASE_URL + "logos/jenkins.png",
+        },
+        {
+            name: "Docker",
+            image: import.meta.env.BASE_URL + "logos/docker.png",
+        },
     ];
 
     return (
