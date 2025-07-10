@@ -36,7 +36,7 @@ export default function Navigation() {
                         <a href="">
                             <img
                                 className="h-10 w-auto"
-                                src="public/favicon.png"
+                                src="favicon.png"
                                 alt="Meetkumar Patel"
                             />
                         </a>

@@ -7,8 +7,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "start": "vite preview --port 5000 --host 0.0.0.0",
-        "deploy": "gh-pages -d dist"
+        "start": "vite preview --port 5000 --host 0.0.0.0"
     },
     "dependencies": {
         "@radix-ui/react-accordion": "^1.2.11",
