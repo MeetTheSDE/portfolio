@@ -5,8 +5,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
+import { Analytics } from "@vercel/analytics/react";
 
-// This component contains your application's routes
 function AppRoutes() {
     return (
         <Switch>
@@ -24,6 +24,7 @@ function App() {
                 {" "}
                 <AppRoutes />
             </Router>
+            <Analytics />
         </TooltipProvider>
     );
 }

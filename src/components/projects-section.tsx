@@ -5,9 +5,9 @@ import { Badge } from "@/components/ui/badge";
 export default function ProjectsSection() {
     const projects = [
         {
-            title: "JobLense: Linkedin Jobs Keywords Highlighter",
+            title: "JobLense: Keywords Highlighter",
             description:
-                "Built a Chrome extension to highlight custom keywords on LinkedIn Jobs using JavaScript and DOM parsing. Supports real-time updates, multiple keyword sets, and performance-optimized highlighting. Designed the extension’s logo and branding assets.",
+                "Chrome extension to highlight custom keywords on LinkedIn Jobs using JavaScript and DOM parsing. Supports real-time updates, multiple keyword sets, and performance-optimized highlighting. Designed the extension’s logo and branding assets.",
             technologies: [
                 "JavaScript",
                 "HTML",
@@ -18,6 +18,21 @@ export default function ProjectsSection() {
             github: "https://github.com/MeetTheSDE/joblense",
             liveDemo:
                 "https://chromewebstore.google.com/detail/ofkagoefchogfbihhlmleomahkaackaf?utm_source=item-share-cb",
+        },
+        {
+            title: "Personal Portfolio",
+            description:
+                "Custom-designed personal portfolio built with React, TypeScript, Tailwind CSS, and Framer Motion. Deployed via GitHub Pages and Vercel, with smooth animations and responsive design. Features dynamic sections for experience, projects and skills — fully modular and easy to extend.",
+            technologies: [
+                "React",
+                "Vite",
+                "TypeScript",
+                "Tailwind CSS",
+                "Wouter",
+                "Vercel",
+            ],
+            github: "https://github.com/MeetTheSDE/meetthesde.github.io",
+            liveDemo: "https://patel-meet.vercel.app",
         },
         {
             title: "Game Review Rating Predictor",
@@ -44,18 +59,6 @@ export default function ProjectsSection() {
                 "PostgreSQL",
                 "Redis",
                 "D3.js",
-            ],
-        },
-        {
-            title: "Smart Attendance",
-            description:
-                "Built a real-time web app to track student attendance by verifying physical presence via Google Maps geolocation. Integrated Firebase for real-time syncing and Spring Boot for authentication and backend services. Visualized attendance analytics using Power BI.",
-            technologies: [
-                "Java",
-                "Spring Boot",
-                "Firebase",
-                "JavaScript",
-                "Power BI",
             ],
         },
     ];
@@ -85,7 +88,7 @@ export default function ProjectsSection() {
                                 <h3 className="text-2xl font-semibold text-foreground mb-3">
                                     {project.title}
                                 </h3>
-                                <p className="text-muted-foreground mb-4 leading-relaxed">
+                                <p className="text-muted-foreground mb-4 leading-relaxed whitespace-pre-line">
                                     {project.description}
                                 </p>
                                 <div className="flex flex-wrap gap-2 mb-4">
@@ -103,7 +106,7 @@ export default function ProjectsSection() {
                             <div className="flex flex-wrap gap-4 mt-6">
                                 {/* GitHub Button */}
                                 {project.github && (
-                                    <motion.a // Changed from motion.button to motion.a
+                                    <motion.a
                                         href={project.github}
                                         target="_blank"
                                         rel="noopener noreferrer"
@@ -117,9 +120,14 @@ export default function ProjectsSection() {
                                 )}
 
                                 {project.liveDemo && (
-                                    <motion.a // Changed from motion.button to motion.a
+                                    <motion.a
                                         href={project.liveDemo}
-                                        target="_blank"
+                                        target={
+                                            project.title ===
+                                            "Personal Portfolio"
+                                                ? "_self"
+                                                : "_blank"
+                                        }
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.97 }}

@@ -19,42 +19,44 @@ export default function SummarySection() {
                                 Software Engineering Expertise
                             </h3>
                             <p className="text-muted-foreground mb-6 leading-relaxed">
-                                Software engineer with 3+ years of experience
-                                building secure, scalable backend systems using
-                                Java, Python, JavaScript and SQL, along with
-                                hands-on frontend skills in React, TypeScript
-                                and Tailwind CSS
+                                Software Engineer with <strong>3+ years</strong>{" "}
+                                at Omeda, built secure, scalable backend systems
+                                using Java, J2EE, JAX-RS, Spring Boot,
+                                JavaScript, SQL, AWS, and led API development
+                                and integrations.
                                 <br />
-                                Strong focus on REST API design, third-party
-                                integrations, and delivering production-ready
-                                features across the stack. <br />
-                                Equally comfortable securing backend or styling
-                                a landing page — with clean, maintainable code
-                                on both ends.
+                                Academically, applied Python, Django, Flask,
+                                AWS, and core ML concepts through diverse
+                                projects that sharpened my problem-solving
+                                skills.
+                                <br />
+                                Comfortable building frontend features with
+                                React and TypeScript, while actively using
+                                Python daily to power backend logic and tooling.
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Third-Party Integrations
+                                        Code Build & Quality
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        API Development
+                                        Code Testing
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Code Quality & Test Automation
+                                        API Development & Integration
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Security & Compliance
+                                        Delivery & Optimization
                                     </span>
                                 </div>
                             </div>
@@ -79,7 +81,7 @@ export default function SummarySection() {
                             className="bg-gradient-to-r from-accent to-primary p-6 rounded-xl text-primary-foreground"
                         >
                             <h4 className="text-xl font-semibold mb-2">
-                                Java, JavaScript, J2EE, SQL, React, AWS
+                                Java, JavaScript, JAX-RS, J2EE, SQL, React, AWS
                             </h4>
                             <p className="text-primary-foreground/80">
                                 Delivered production SaaS features at Omeda
@@ -90,10 +92,11 @@ export default function SummarySection() {
                             className="bg-gradient-to-r from-primary to-accent p-6 rounded-xl text-primary-foreground"
                         >
                             <h4 className="text-xl font-semibold mb-2">
-                                Python, TypeScript, Tailwind CSS
+                                Python, Django, TypeScript, React
                             </h4>
                             <p className="text-primary-foreground/80">
-                                Hands-on every day
+                                Academically grounded, self-taught, and
+                                project-tested
                             </p>
                         </motion.div>
                     </div>

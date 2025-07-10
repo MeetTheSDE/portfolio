@@ -100,12 +100,6 @@ export default function HeroSection() {
                         >
                             <Linkedin className="text-primary text-xl" />
                         </a>
-                        {/* <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                            <Cloud className="text-primary text-xl" />
-                        </div>
-                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
-                            <Zap className="text-primary text-xl" />
-                        </div> */}
                     </div>
                 </motion.div>
             </div>

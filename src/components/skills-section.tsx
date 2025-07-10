@@ -2,38 +2,38 @@ import { motion } from "framer-motion";
 
 export default function SkillsSection() {
     const skills = [
+        { name: "Java", image: import.meta.env.BASE_URL + "logos/java.png" },
+        {
+            name: "API Design & Integration",
+            image: import.meta.env.BASE_URL + "logos/api.png",
+        },
+        { name: "MySQL", image: import.meta.env.BASE_URL + "logos/mysql.png" },
+        {
+            name: "Unit & Integration Testing",
+            image: import.meta.env.BASE_URL + "logos/testing.png",
+        },
         {
             name: "Python",
             image: import.meta.env.BASE_URL + "logos/python.png",
-        },
-        { name: "Java", image: import.meta.env.BASE_URL + "logos/java.png" },
-        { name: "MySQL", image: import.meta.env.BASE_URL + "logos/mysql.png" },
-        {
-            name: "PostgreSQL",
-            image: import.meta.env.BASE_URL + "logos/postgresql.png",
-        },
-        {
-            name: "Tailwind CSS",
-            image: import.meta.env.BASE_URL + "logos/tailwind.png",
         },
         {
             name: "JavaScript",
             image: import.meta.env.BASE_URL + "logos/javascript.png",
         },
+        { name: "AWS", image: import.meta.env.BASE_URL + "logos/aws.png" },
+        { name: "Git", image: import.meta.env.BASE_URL + "logos/github.png" },
+        {
+            name: "PostgreSQL",
+            image: import.meta.env.BASE_URL + "logos/postgresql.png",
+        },
+        {
+            name: "Jenkins (CI/ CD)",
+            image: import.meta.env.BASE_URL + "logos/jenkins.png",
+        },
         { name: "React", image: import.meta.env.BASE_URL + "logos/react.png" },
         {
             name: "TypeScript",
             image: import.meta.env.BASE_URL + "logos/typescript.png",
-        },
-        {
-            name: "Docker",
-            image: import.meta.env.BASE_URL + "logos/docker.png",
-        },
-        { name: "AWS", image: import.meta.env.BASE_URL + "logos/aws.png" },
-        { name: "Git", image: import.meta.env.BASE_URL + "logos/github.png" },
-        {
-            name: "Jenkins",
-            image: import.meta.env.BASE_URL + "logos/jenkins.png",
         },
     ];
 
@@ -69,10 +69,12 @@ export default function SkillsSection() {
                                             alt={skill.name}
                                             className="w-16 h-16 object-contain"
                                         />
-                                    ) : // ) : IconComponent ? (
+                                    ) : // ) :
+                                    // IconComponent ? (
                                     //     <IconComponent
                                     //         className={`text-4xl ${skill.color}`}
                                     //     />
+                                    // ) :
                                     null}
                                 </div>
                                 <h3 className="font-semibold text-foreground">

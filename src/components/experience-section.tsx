@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { CheckCircle } from "lucide-react";
+import { CheckCircle, SquareArrowOutUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 export default function ExperienceSection() {
@@ -27,7 +27,7 @@ export default function ExperienceSection() {
                 "Postman",
             ],
             achievements: [
-                "Build and maintain critical components of Subscription Management, Cusomter Data Platform and Channel Engagement for publishers and digital media companies",
+                "Built and maintained critical components of Subscription Management, Cusomter Data Platform and Channel Engagement for publishers and digital media companies",
                 <span>
                     Integrated{" "}
                     <a
@@ -40,10 +40,9 @@ export default function ExperienceSection() {
                     </a>{" "}
                     with AWS Lambda for real-time billing & webhooks
                 </span>,
-                "Build access control dashboards, audience & data management tools, and product config tools in Java/JAX-RS — reducing support tickets by 70%",
-                // "Refactored legacy APIs, optimize payloads and added caching/pagination — boosted performance by 20%",
-                // "Created automated, real-time email campaigns tied to voyage events (30% engagement gain)",
-                "Design and Maintain comprehensive unit and integration test suites",
+                "Built access control dashboards, audience & data management tools, and product config tools in Java/JAX-RS — reducing support tickets by 70%",
+                "Revamped legacy systems — streamlined DTOs, minimized payloads, and implemented caching and pagination",
+                "Designed and maintained comprehensive unit and integration test suites",
             ],
         },
         {
@@ -95,9 +94,9 @@ export default function ExperienceSection() {
                     >
                         real estate platform
                     </a>{" "}
-                    with Spring Boot and Hibernate
+                    with Spring Boot, Hibernate and MySQL
                 </span>,
-                "Implemented live search and filtering with jQuery/AJAX",
+                "Implemented dynamic content loading and live filtering with jQuery and AJAX",
                 "Wrote 300+ unit tests with JUnit and TestNG; Leveraged Git, GitHub for code management",
             ],
         },
@@ -139,7 +138,7 @@ export default function ExperienceSection() {
                                         <h3 className="text-2xl font-semibold text-foreground mb-2">
                                             {experience.title}
                                         </h3>
-                                        {/* <p className="text-primary font-medium mb-2 flex flex-wrap items-center">
+                                        <p className="text-primary font-medium mb-2 flex flex-wrap items-center">
                                             <a
                                                 href={`https://${experience.companyUrl}`}
                                                 target="_blank"
@@ -149,12 +148,9 @@ export default function ExperienceSection() {
                                                 {experience.company} •{" "}
                                                 {experience.location}
                                                 <SquareArrowOutUpRight className="h-4 w-4 ml-1 flex-shrink-0" />
-                                                </a>{" "}
-                                                </p> */}
-                                        <p className="text-primary font-medium mb-2 flex flex-wrap items-center">
-                                            {experience.company} •{" "}
-                                            {experience.location}
+                                            </a>{" "}
                                         </p>
+                                        <p className="text-primary font-medium mb-2 flex flex-wrap items-center"></p>
                                         <ul className="space-y-3 text-muted-foreground mb-4">
                                             {experience.achievements.map(
                                                 (achievement, achIndex) => (
