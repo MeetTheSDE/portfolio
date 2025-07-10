@@ -89,19 +89,6 @@ export default function EducationSection() {
                                 <p className="text-muted-foreground mb-1">
                                     GPA: {edu.gpa}
                                 </p>
-                                {/* <span className="text-muted-foreground">
-                                    GPA: {edu.gpa}
-                                </span> */}
-
-                                {/* <div className="flex justify-between items-center"> */}
-
-                                {/* <Badge
-                                        variant="secondary"
-                                        className="bg-primary/10 text-primary"
-                                    >
-                                        {edu.type}
-                                    </Badge> */}
-                                {/* </div> */}
                             </div>
                         </motion.div>
                     ))}

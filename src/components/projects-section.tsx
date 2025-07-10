@@ -131,7 +131,7 @@ export default function ProjectsSection() {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.97 }}
-                                        className="border border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors flex items-center gap-2 no-underline" // Added no-underline
+                                        className="border border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors flex items-center gap-2 no-underline"
                                     >
                                         <ExternalLink className="h-4 w-4" />
                                         Live Demo

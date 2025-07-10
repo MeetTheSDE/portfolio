@@ -38,25 +38,25 @@ export default function SummarySection() {
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Code Build & Quality
+                                        Backend Development
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Code Testing
+                                        API Engineering & Integration
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        API Development & Integration
+                                        Code Quality & Testing Automation
                                     </span>
                                 </div>
                                 <div className="flex items-center">
                                     <CheckCircle className="h-5 w-5 text-primary mr-2" />
                                     <span className="text-sm text-muted-foreground">
-                                        Delivery & Optimization
+                                        Security, Deployment & Optimization
                                     </span>
                                 </div>
                             </div>
