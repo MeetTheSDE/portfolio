@@ -51,9 +51,6 @@ export default function HeroSection() {
                         transition={{ duration: 1, delay: 0.4 }}
                         className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto"
                     >
-                        {/* Delivering scalable, secure systems with 3+ years of
-                        experience in Java, Python, JavaScript, and cloud-based
-                        solutions */}
                         Write once, run fast, stay secure
                     </motion.p>
                     <motion.div

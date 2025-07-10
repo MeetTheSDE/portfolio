@@ -29,8 +29,17 @@ export default function Navigation() {
         <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="flex justify-between items-center h-16">
-                    <div className="font-bold text-xl text-primary">
-                        <a href="#hero">Meetkumar Patel</a>
+                    {/* <div className="font-bold text-xl text-primary">
+                        <a href="">Meetkumar Patel</a>
+                    </div> */}
+                    <div className="flex-shrink-0">
+                        <a href="">
+                            <img
+                                className="h-10 w-auto"
+                                src="public/favicon.png"
+                                alt="Meetkumar Patel"
+                            />
+                        </a>
                     </div>
 
                     {/* Desktop Navigation */}
