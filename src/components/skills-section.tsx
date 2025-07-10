@@ -38,7 +38,7 @@ export default function SkillsSection() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-background">
+        <section id="skills" className="py-20 bg-background dark:bg-background">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -53,14 +53,13 @@ export default function SkillsSection() {
 
                 <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 section-fade cursor-pointer">
                     {skills.map((skill) => {
-                        // const IconComponent = skill.icon ?? null;
                         return (
                             <motion.div
                                 key={skill.name}
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 whileInView={{ opacity: 1, scale: 1 }}
                                 whileHover={{ y: -5, scale: 1.05 }}
-                                className="skill-logo bg-light p-6 rounded-2xl text-center shadow-sm hover:shadow-lg transition-all duration-300"
+                                className="skill-logo bg-light p-6 rounded-2xl text-center shadow-sm hover:shadow-lg transition-all duration-300 dark:bg-muted dark:hover:shadow-xl dark:border dark:border-border"
                             >
                                 <div className="w-20 h-20 mx-auto mb-4 flex items-center justify-center">
                                     {skill.image ? (
@@ -69,13 +68,7 @@ export default function SkillsSection() {
                                             alt={skill.name}
                                             className="w-16 h-16 object-contain"
                                         />
-                                    ) : // ) :
-                                    // IconComponent ? (
-                                    //     <IconComponent
-                                    //         className={`text-4xl ${skill.color}`}
-                                    //     />
-                                    // ) :
-                                    null}
+                                    ) : null}
                                 </div>
                                 <h3 className="font-semibold text-foreground">
                                     {skill.name}

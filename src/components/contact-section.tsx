@@ -84,7 +84,8 @@ export default function ContactSection() {
     ];
 
     return (
-        <section id="contact" className="py-20 bg-light">
+        <section id="contact" className="py-20 bg-light dark:bg-background">
+            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -115,7 +116,8 @@ export default function ContactSection() {
                                     const IconComponent = info.icon;
                                     const content = (
                                         <div className="flex items-center">
-                                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4">
+                                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 dark:bg-primary/20">
+                                                {" "}
                                                 <IconComponent className="h-5 w-5 text-primary" />
                                             </div>
                                             <div>
@@ -133,7 +135,7 @@ export default function ContactSection() {
                                         <a
                                             key={info.label}
                                             href={info.link}
-                                            className="block hover:bg-light p-2 rounded-lg transition-colors"
+                                            className="block hover:bg-light p-2 rounded-lg transition-colors dark:hover:bg-muted"
                                             {...(info.label === "LinkedIn" && {
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -156,7 +158,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-light p-8 rounded-2xl"
+                        className="bg-light p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
                     >
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message
@@ -180,7 +182,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2"
+                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -201,7 +203,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2"
+                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -222,7 +224,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2"
+                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -243,7 +245,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2 resize-none"
+                                    className="mt-2 resize-none dark:bg-input dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <Button

@@ -37,7 +37,7 @@ export default function ProjectsSection() {
         {
             title: "Game Review Rating Predictor",
             description:
-                "Flask-based app to predict game ratings using NLP (TF-IDF, tokenization, K-fold CV). Achieved 90% accuracy across 13M+ user comments. Deployed the application on the Heroku platform and designed the front-end interface using HTML and Bootstrap. ",
+                "Flask-based app to predict game ratings using NLP (TF-IDF, tokenization, K-fold CV). Achieved 90% accuracy across 13M+ user comments. Deployed the application on the Heroku platform and designed the front-end interface using HTML and Bootstrap. ",
             technologies: [
                 "Python",
                 "Flask",
@@ -64,7 +64,8 @@ export default function ProjectsSection() {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-light">
+        <section id="projects" className="py-20 bg-light dark:bg-background">
+            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -82,7 +83,7 @@ export default function ProjectsSection() {
                             whileInView={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.3, delay: index * 0 }}
                             whileHover={{ y: -4 }}
-                            className="bg-background p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 select-none cursor-default"
+                            className="bg-background p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 select-none cursor-default dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border"
                         >
                             <div className="mb-6">
                                 <h3 className="text-2xl font-semibold text-foreground mb-3">
@@ -96,7 +97,7 @@ export default function ProjectsSection() {
                                         <Badge
                                             key={tech}
                                             variant="secondary"
-                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer"
+                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
                                         >
                                             {tech}
                                         </Badge>
@@ -112,7 +113,7 @@ export default function ProjectsSection() {
                                         rel="noopener noreferrer"
                                         whileHover={{ scale: 1.03 }}
                                         whileTap={{ scale: 0.97 }}
-                                        className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2 no-underline" // Added no-underline
+                                        className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2 no-underline"
                                     >
                                         <Github className="h-4 w-4" />
                                         GitHub

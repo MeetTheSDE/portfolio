@@ -25,7 +25,9 @@ export default function HeroSection() {
     return (
         <section
             id="hero"
-            className="min-h-screen flex items-center justify-center bg-gradient-to-br from-light to-white pt-16"
+            className="min-h-screen flex items-center justify-center
+                       bg-gradient-to-br from-light to-white
+                       dark:from-background dark:to-muted dark:bg-background pt-16"
         >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div
@@ -88,7 +90,8 @@ export default function HeroSection() {
                             href="https://github.com/MeetTheSDE"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                            className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center
+                                       dark:bg-primary/20 dark:hover:bg-primary/30"
                         >
                             <Github className="text-primary text-xl" />
                         </a>
@@ -96,7 +99,8 @@ export default function HeroSection() {
                             href="https://www.linkedin.com/in/meet1809/"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center"
+                            className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center
+                                       dark:bg-primary/20 dark:hover:bg-primary/30"
                         >
                             <Linkedin className="text-primary text-xl" />
                         </a>

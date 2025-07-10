@@ -25,7 +25,8 @@ export default function EducationSection() {
     ];
 
     return (
-        <section id="education" className="py-20 bg-background">
+        <section id="education" className="py-20 bg-background dark:bg-muted">
+            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -45,12 +46,13 @@ export default function EducationSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className="bg-light p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 select-none cursor-default"
+                            className="bg-light p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 select-none cursor-default dark:bg-card dark:hover:shadow-lg dark:border dark:border-border"
                         >
                             <div className="mb-6">
                                 <div className="flex justify-between items-center mb-4">
                                     <span className="text-muted-foreground">
-                                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center">
+                                        <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center dark:bg-primary/20">
+                                            {" "}
                                             <GraduationCap className="h-8 w-8 text-primary" />
                                         </div>
                                     </span>
@@ -58,13 +60,13 @@ export default function EducationSection() {
                                     <span className="flex flex-col items-end gap-1">
                                         <Badge
                                             variant="secondary"
-                                            className="bg-primary/10 text-primary"
+                                            className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
                                         >
                                             {edu.type}
                                         </Badge>
                                         <Badge
                                             variant="secondary"
-                                            className="bg-primary/10 text-primary"
+                                            className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
                                         >
                                             {edu.duration}
                                         </Badge>
@@ -80,7 +82,7 @@ export default function EducationSection() {
                                         href={`https://${edu.url}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        className="inline-flex items-center gap-1"
+                                        className="inline-flex items-center gap-1 dark:text-primary dark:hover:text-primary/80"
                                     >
                                         {edu.institution} • {edu.location}
                                         <SquareArrowOutUpRight className="h-4 w-4 ml-1 flex-shrink-0" />

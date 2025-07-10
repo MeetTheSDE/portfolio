@@ -3,7 +3,11 @@ import { CheckCircle } from "lucide-react";
 
 export default function SummarySection() {
     return (
-        <section id="summary" className="py-20 bg-background">
+        <section
+            id="summary"
+            className="py-20 bg-background dark:bg-background"
+        >
+            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -14,7 +18,8 @@ export default function SummarySection() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-center section-fade cursor-default select-none">
                     <div>
-                        <div className="bg-light p-8 rounded-2xl shadow-sm">
+                        <div className="bg-light p-8 rounded-2xl shadow-sm dark:bg-muted dark:text-foreground">
+                            {" "}
                             <h3 className="text-2xl font-semibold text-foreground mb-4">
                                 Software Engineering Expertise
                             </h3>

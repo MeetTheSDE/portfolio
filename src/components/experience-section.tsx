@@ -103,7 +103,8 @@ export default function ExperienceSection() {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-light">
+        <section id="experience" className="py-20 bg-light dark:bg-muted">
+            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -128,13 +129,13 @@ export default function ExperienceSection() {
                                             experience.current
                                                 ? "bg-primary"
                                                 : "bg-muted-foreground"
-                                        } text-white px-4 py-2 rounded-lg text-sm font-medium inline-block`}
+                                        } text-white px-4 py-2 rounded-lg text-sm font-medium inline-block dark:text-primary-foreground`}
                                     >
                                         {experience.period}
                                     </div>
                                 </div>
                                 <div className="md:w-3/4 md:pl-8 select-none cursor-default">
-                                    <div className="bg-background p-8 rounded-2xl shadow-sm">
+                                    <div className="bg-background p-8 rounded-2xl shadow-sm dark:bg-card dark:border dark:border-border">
                                         <h3 className="text-2xl font-semibold text-foreground mb-2">
                                             {experience.title}
                                         </h3>
@@ -143,7 +144,7 @@ export default function ExperienceSection() {
                                                 href={`https://${experience.companyUrl}`}
                                                 target="_blank"
                                                 rel="noopener noreferrer"
-                                                className="inline-flex items-center gap-1"
+                                                className="inline-flex items-center gap-1 dark:text-primary dark:hover:text-primary/80"
                                             >
                                                 {experience.company} •{" "}
                                                 {experience.location}
@@ -172,7 +173,7 @@ export default function ExperienceSection() {
                                                     <Badge
                                                         key={tech}
                                                         variant="secondary"
-                                                        className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer"
+                                                        className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
                                                     >
                                                         {tech}
                                                     </Badge>
