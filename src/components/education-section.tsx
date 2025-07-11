@@ -25,7 +25,10 @@ export default function EducationSection() {
     ];
 
     return (
-        <section id="education" className="py-20 bg-background dark:bg-muted">
+        <section
+            id="education"
+            className="py-20 bg-background dark:bg-background"
+        >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
@@ -46,7 +49,7 @@ export default function EducationSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6, delay: index * 0.1 }}
                             whileHover={{ y: -5 }}
-                            className="bg-light p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 select-none cursor-default dark:bg-card dark:hover:shadow-lg dark:border dark:border-border"
+                            className="bg-light p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 select-none cursor-default dark:bg-muted dark:hover:shadow-lg dark:border dark:border-border"
                         >
                             <div className="mb-6">
                                 <div className="flex justify-between items-center mb-4">
