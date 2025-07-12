@@ -103,7 +103,10 @@ export default function ExperienceSection() {
     ];
 
     return (
-        <section id="experience" className="py-20 bg-light dark:bg-muted">
+        <section
+            id="experience"
+            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_60%,hsl(var(--muted))_100%)]"
+        >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
@@ -128,7 +131,7 @@ export default function ExperienceSection() {
                                         className={`${
                                             experience.current
                                                 ? "bg-primary"
-                                                : "bg-muted-foreground"
+                                                : "bg-muted-foreground dark:bg-background"
                                         } text-white px-4 py-2 rounded-lg text-sm font-medium inline-block dark:text-primary-foreground`}
                                     >
                                         {experience.period}

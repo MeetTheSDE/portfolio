@@ -64,7 +64,10 @@ export default function ProjectsSection() {
     ];
 
     return (
-        <section id="projects" className="py-20 bg-light dark:bg-muted">
+        <section
+            id="projects"
+            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_30%,hsl(var(--muted))_100%)]"
+        >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">

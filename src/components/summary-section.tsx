@@ -5,7 +5,7 @@ export default function SummarySection() {
     return (
         <section
             id="summary"
-            className="py-20 bg-background dark:bg-background"
+            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_80%,hsl(var(--background))_100%)]"
         >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">

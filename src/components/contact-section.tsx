@@ -84,7 +84,10 @@ export default function ContactSection() {
     ];
 
     return (
-        <section id="contact" className="py-20 bg-light dark:bg-muted">
+        <section
+            id="contact"
+            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_100%)]"
+        >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
@@ -135,7 +138,7 @@ export default function ContactSection() {
                                         <a
                                             key={info.label}
                                             href={info.link}
-                                            className="block hover:bg-light p-2 rounded-lg transition-colors dark:hover:bg-muted"
+                                            className="block hover:bg-background p-2 rounded-lg transition-colors dark:hover:bg-background"
                                             {...(info.label === "LinkedIn" && {
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -144,7 +147,10 @@ export default function ContactSection() {
                                             {content}
                                         </a>
                                     ) : (
-                                        <div key={info.label} className="p-2">
+                                        <div
+                                            key={info.label}
+                                            className="block hover:bg-background p-2 rounded-lg transition-colors dark:hover:bg-background"
+                                        >
                                             {content}
                                         </div>
                                     );
