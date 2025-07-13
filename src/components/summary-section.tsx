@@ -5,7 +5,8 @@ export default function SummarySection() {
     return (
         <section
             id="summary"
-            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_30%,hsl(var(--background))_100%)]"
+            className="py-20 bg-background dark:bg-background"
+            // className="py-20 bg-background dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_50%,hsl(var(--background))_100%)]"
         >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -18,7 +19,12 @@ export default function SummarySection() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-center section-fade cursor-default select-none">
                     <div>
-                        <div className="bg-light p-8 rounded-2xl shadow-sm dark:bg-muted dark:text-foreground">
+                        <div
+                            className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
+                                        select-none cursor-default 
+                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
+                                        "
+                        >
                             {" "}
                             <h3 className="text-2xl font-semibold text-foreground mb-4">
                                 Software Engineering Expertise

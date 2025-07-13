@@ -26,8 +26,8 @@ export default function HeroSection() {
         <section
             id="hero"
             className="min-h-screen flex items-center justify-center
-                       bg-gradient-to-b from-light to-white
-                       dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--background))_30%,hsl(var(--muted))_100%)] pt-16"
+                       bg-gradient-to-b from-muted to-white
+                       dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_30%,hsl(var(--background))_100%)] pt-16"
         >
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <motion.div

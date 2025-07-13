@@ -27,7 +27,8 @@ export default function EducationSection() {
     return (
         <section
             id="education"
-            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_50%,hsl(var(--background))_80%,hsl(var(--muted))_100%)]"
+            className="py-20 bg-background dark:bg-background"
+            // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_50%,hsl(var(--background))_80%,hsl(var(--muted))_100%)]"
         >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -43,13 +44,17 @@ export default function EducationSection() {
                         <motion.div
                             key={edu.degree}
                             initial={{
-                                opacity: 0,
+                                opacity: 0.9,
                                 x: index % 2 === 0 ? -50 : 50,
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6, delay: index * 0.1 }}
+                            transition={{ duration: 0.0, delay: index * 0.0 }}
                             whileHover={{ y: -5 }}
-                            className="bg-light p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 select-none cursor-default dark:bg-muted dark:hover:shadow-lg dark:border dark:border-border"
+                            className="
+                                        bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
+                                        select-none cursor-default 
+                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
+                                        "
                         >
                             <div className="mb-6">
                                 <div className="flex justify-between items-center mb-4">

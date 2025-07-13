@@ -66,7 +66,8 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_30%,hsl(var(--muted))_100%)]"
+            className="py-20 bg-background dark:bg-background"
+            // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_30%,hsl(var(--muted))_100%)]"
         >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -82,11 +83,15 @@ export default function ProjectsSection() {
                         <motion.div
                             key={project.title}
                             layout
-                            initial={{ opacity: 0, y: 30 }}
+                            initial={{ opacity: 0.9, y: 30 }}
                             whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3, delay: index * 0 }}
-                            whileHover={{ y: -4 }}
-                            className="bg-background p-8 rounded-2xl shadow-sm hover:shadow-md transition-all duration-200 select-none cursor-default dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border"
+                            transition={{ duration: 0.0, delay: index * 0 }}
+                            whileHover={{ y: -5 }}
+                            className="
+                                        bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
+                                        select-none cursor-default 
+                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
+                                        "
                         >
                             <div className="mb-6">
                                 <h3 className="text-2xl font-semibold text-foreground mb-3">
@@ -108,7 +113,6 @@ export default function ProjectsSection() {
                                 </div>
                             </div>
                             <div className="flex flex-wrap gap-4 mt-6">
-                                {/* GitHub Button */}
                                 {project.github && (
                                     <motion.a
                                         href={project.github}

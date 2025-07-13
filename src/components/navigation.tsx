@@ -35,8 +35,8 @@ export default function Navigation() {
     const navLinks = [
         { href: "#hero", label: "Home" },
         { href: "#summary", label: "Summary" },
-        { href: "#experience", label: "Experience" },
         { href: "#skills", label: "Skills" },
+        { href: "#experience", label: "Experience" },
         { href: "#projects", label: "Projects" },
         { href: "#education", label: "Education" },
         { href: "#contact", label: "Contact" },
@@ -56,7 +56,6 @@ export default function Navigation() {
                         </a>
                     </div>
 
-                    {/* Desktop Navigation */}
                     <div className="hidden md:flex items-center space-x-8">
                         {navLinks.map((link) => (
                             <button
@@ -67,7 +66,6 @@ export default function Navigation() {
                                 {link.label}
                             </button>
                         ))}
-                        {/* Dark Mode Toggle for Desktop */}
                         <button
                             onClick={toggleDarkMode}
                             className="text-muted-foreground hover:text-primary transition-colors ml-4 dark:text-muted-foreground/80 dark:hover:text-primary"
@@ -81,7 +79,6 @@ export default function Navigation() {
                         </button>
                     </div>
 
-                    {/* Mobile Menu Button and Dark Mode Toggle for Mobile */}
                     <div className="md:hidden flex items-center space-x-4">
                         <button
                             onClick={() =>
@@ -110,7 +107,6 @@ export default function Navigation() {
                 </div>
             </div>
 
-            {/* Mobile Menu */}
             {isMobileMenuOpen && (
                 <div className="md:hidden bg-white border-t dark:bg-background dark:border-border">
                     <div className="px-2 pt-2 pb-3 space-y-1">

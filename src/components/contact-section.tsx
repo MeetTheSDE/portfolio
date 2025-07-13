@@ -86,7 +86,7 @@ export default function ContactSection() {
     return (
         <section
             id="contact"
-            className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_100%)]"
+            className="py-20 bg-background dark:bg-background"
         >
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -138,7 +138,7 @@ export default function ContactSection() {
                                         <a
                                             key={info.label}
                                             href={info.link}
-                                            className="block hover:bg-background p-2 rounded-lg transition-colors dark:hover:bg-background"
+                                            className="block hover:bg-muted p-2 rounded-lg transition-colors dark:hover:bg-muted"
                                             {...(info.label === "LinkedIn" && {
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -149,7 +149,7 @@ export default function ContactSection() {
                                     ) : (
                                         <div
                                             key={info.label}
-                                            className="block hover:bg-background p-2 rounded-lg transition-colors dark:hover:bg-background"
+                                            className="block hover:bg-muted p-2 rounded-lg transition-colors dark:hover:bg-muted"
                                         >
                                             {content}
                                         </div>
@@ -164,7 +164,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-light p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
+                        className="bg-muted p-8 rounded-2xl dark:bg-background dark:border dark:border-border"
                     >
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message

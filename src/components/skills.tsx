@@ -1,7 +1,4 @@
-import { motion } from "framer-motion";
-
 export default function Skills() {
-    // Define skill images and names
     const skills = [
         {
             name: "Java",
@@ -37,11 +34,6 @@ export default function Skills() {
             name: "Jenkins",
             imageSrc: import.meta.env.BASE_URL + "logos/jenkins.png",
             imageAlt: "Jenkins",
-        },
-        {
-            name: "Unit & Integration Testing",
-            imageSrc: import.meta.env.BASE_URL + "logos/testing.png",
-            imageAlt: "Testing",
         },
         {
             name: "JUnit",
@@ -91,18 +83,15 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="py-16">
+        <section id="skills" className="py-20 bg-background dark:bg-background">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <motion.h2
-                    initial={{ opacity: 0, y: 30 }}
-                    animate={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.6, ease: "easeOut" }}
-                    className="text-3xl md:text-4xl font-bold text-center text-foreground mb-12"
-                >
-                    Technologies I Work With
-                </motion.h2>
+                <div className="text-center mb-16 section-fade">
+                    <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
+                        Skills
+                    </h2>
+                    <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
+                </div>
 
-                {/* Define custom keyframes for the scrolling animation */}
                 <style>
                     {`
                         @keyframes scroll-left {
@@ -114,7 +103,11 @@ export default function Skills() {
                             }
                         }
                         .animate-scroll-left {
-                            animation: scroll-left 60s linear infinite; /* Adjust duration for speed */
+                            animation: scroll-left 60s linear infinite;
+                        }
+
+                        .skill-bar-container {
+                            position: relative;
                         }
 
                         .skill-bar-container::before,
@@ -123,59 +116,54 @@ export default function Skills() {
                             position: absolute;
                             top: 0;
                             bottom: 0;
-                            width: 8rem;
+                            width: 6rem;
                             z-index: 10;
                             pointer-events: none;
                         }
 
                         .skill-bar-container::before {
                             left: 0;
-                            background: transparent;
+                            background: linear-gradient(to right, hsl(var(--background)) 0%, transparent 100%);
                         }
 
                         .skill-bar-container::after {
                             right: 0;
-                            background: transparent;
+                            background: linear-gradient(to left, hsl(var(--background)) 0%, transparent 100%);
                         }
                     `}
                 </style>
 
                 {/* Infinite Scrolling Skill Bar */}
-                <div className="relative w-full mx-auto overflow-hidden mt-8 py-8 skill-bar-container">
-                    {/* This inner div contains the duplicated skills and is animated */}
+                <div className="relative w-full mx-auto overflow-hidden mt-8 py-10 skill-bar-container">
                     <div className="flex animate-scroll-left whitespace-nowrap w-max">
-                        {/* Duplicate skills array to ensure continuous loop */}
                         {[...skills, ...skills].map((skill, index) => (
                             <div
-                                key={`skill-${index}`} // Unique key for each duplicated item
-                                // Added new classes for the card effect
+                                key={`skill-${index}`}
                                 className="relative flex flex-col items-center justify-center
                                            px-6 py-3 mr-6 flex-shrink-0 group
-                                           bg-muted rounded-xl shadow-sm
-                                           border border-muted transform hover:scale-105 transition-transform duration-300 ease-in-out" // Add hover effect
+                                           bg-muted rounded-xl
+                                           border border-transparent transform hover:scale-125 transition-transform duration-300 ease-in-out"
                             >
                                 <img
                                     src={skill.imageSrc}
                                     alt={skill.imageAlt}
-                                    className="w-10 h-10 object-contain mb-2" // Added mb-2 for a little space
+                                    className="w-9 h-12 object-contain"
                                     onError={(
                                         e: React.SyntheticEvent<
                                             HTMLImageElement,
                                             Event
                                         >
                                     ) => {
-                                        // Explicitly cast e.target
                                         (e.target as HTMLImageElement).src =
                                             "https://placehold.co/40x40/cccccc/000000?text=Error";
                                     }}
                                 />
-                                {/* Skill name description on hover, styled as a badge */}
                                 <div
                                     className="absolute bottom-[-1.8rem] left-1/2 -translate-x-1/2
                                                 opacity-0 group-hover:opacity-100 transition-opacity duration-300
                                                 text-xs px-2 py-1 rounded-md whitespace-nowrap
                                                 pointer-events-none z-20
-                                                bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
+                                                bg-transparent text-muted-foreground hover:bg-transparent cursor-pointer dark:bg-transparent dark:text-muted-foreground dark:hover:bg-primary/30"
                                 >
                                     {skill.name}
                                 </div>
