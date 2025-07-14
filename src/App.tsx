@@ -6,6 +6,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import Portfolio from "@/pages/portfolio";
 import NotFound from "@/pages/not-found";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/react";
 
 function AppRoutes() {
     return (
@@ -23,6 +24,7 @@ function App() {
             <Router hook={useHashLocation}>
                 {" "}
                 <AppRoutes />
+                <SpeedInsights />
             </Router>
             <Analytics />
         </TooltipProvider>
