@@ -12,16 +12,6 @@ export default function HeroSection() {
         }
     };
 
-    const handleScrollToProjects = () => {
-        const element = document.querySelector("#projects");
-        if (element) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }
-    };
-
     return (
         <section
             id="hero"
