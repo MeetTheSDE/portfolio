@@ -67,12 +67,14 @@ export default function HeroSection() {
                         >
                             Get In Touch
                         </button>
-                        <button
-                            onClick={handleScrollToProjects}
+                        <a
+                            href="/MeetkumarPatel_Resume.pdf"
+                            target="_blank"
+                            rel="noopener noreferrer"
                             className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
                         >
-                            View My Work
-                        </button>
+                            View Resume
+                        </a>
                     </motion.div>
                 </motion.div>
 
