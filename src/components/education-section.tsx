@@ -68,13 +68,13 @@ export default function EducationSection() {
                                     <span className="flex flex-col items-end gap-1">
                                         <Badge
                                             variant="secondary"
-                                            className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
+                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
                                         >
                                             {edu.type}
                                         </Badge>
                                         <Badge
                                             variant="secondary"
-                                            className="bg-primary/10 text-primary dark:bg-primary/20 dark:text-primary"
+                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
                                         >
                                             {edu.duration}
                                         </Badge>
