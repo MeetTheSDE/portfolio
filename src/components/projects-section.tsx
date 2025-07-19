@@ -83,10 +83,14 @@ export default function ProjectsSection() {
                         <motion.div
                             key={project.title}
                             layout
-                            initial={{ opacity: 0.9, y: 30 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.0, delay: index * 0 }}
-                            whileHover={{ y: -5 }}
+                            // initial={{ opacity: 0.9, y: 30 }}
+                            initial={{
+                                opacity: 0.9,
+                                x: index % 2 === 0 ? -50 : 50,
+                            }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0, delay: index * 0 }}
+                            // whileHover={{ y: -5 }}
                             className="
                                         bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
                                         select-none cursor-default 

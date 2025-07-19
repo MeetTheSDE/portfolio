@@ -103,7 +103,6 @@ export default function ContactSection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 section-fade">
-                    {/* Contact Info */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -159,7 +158,6 @@ export default function ContactSection() {
                         </div>
                     </motion.div>
 
-                    {/* Contact Form */}
                     <motion.div
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}

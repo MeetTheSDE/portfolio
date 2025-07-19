@@ -49,7 +49,7 @@ export default function EducationSection() {
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.0, delay: index * 0.0 }}
-                            whileHover={{ y: -5 }}
+                            // whileHover={{ y: -5 }}
                             className="
                                         bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
                                         select-none cursor-default 

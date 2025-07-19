@@ -20,9 +20,9 @@ export default function SummarySection() {
                 <div className="grid md:grid-cols-2 gap-12 items-center section-fade cursor-default select-none">
                     <div>
                         <div
-                            className="bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
+                            className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-md card-hover transition-all duration-200
                                         select-none cursor-default 
-                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
+                                        dark:bg-card dark:shadow-xl dark:hover:shadow-xl dark:border dark:border-border
                                         "
                         >
                             {" "}
