@@ -27,7 +27,36 @@ export default function ExperienceSection() {
                 "Postman",
             ],
             achievements: [
-                "Built and maintained critical components of Subscription Management, Cusomter Data Platform and Channel Engagement for publishers and digital media companies",
+                <span>
+                    Built and maintained critical components of{" "}
+                    <a
+                        href="https://www.omeda.com/solutions/#audience-subscription"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-underline text-primary underline hover:text-primary/80"
+                    >
+                        Subscription Management
+                    </a>
+                    {", "}
+                    <a
+                        href="https://www.omeda.com/solutions/#aggregate"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-underline text-primary underline hover:text-primary/80"
+                    >
+                        Cusomter Data Platform
+                    </a>
+                    {" and "}
+                    <a
+                        href="https://www.omeda.com/solutions/#audience-channel"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="no-underline text-primary underline hover:text-primary/80"
+                    >
+                        Audience Channel Engagement
+                    </a>{" "}
+                    for publishers and digital media companies
+                </span>,
                 <span>
                     Integrated{" "}
                     <a
@@ -40,8 +69,7 @@ export default function ExperienceSection() {
                     </a>{" "}
                     with AWS Lambda for real-time billing & webhooks
                 </span>,
-                "Built access control dashboards, audience & data management tools, and product config tools in Java/JAX-RS — reducing support tickets by 70%",
-                "Revamped legacy systems — streamlined DTOs, minimized payloads, and implemented caching and pagination",
+                "Built access control dashboards, audience & data management tools, and configuration tools",
                 "Designed and maintained comprehensive unit and integration test suites",
             ],
         },
@@ -59,7 +87,7 @@ export default function ExperienceSection() {
                 "Assignment Design & Grading",
             ],
             achievements: [
-                "Mentored 40+ students and provided individualized support on course topics",
+                "Mentored 60+ students and provided individualized support on course topics",
                 "Created and graded assignments, ensuring fair evaluation aligned with course objectives",
                 "Collaborated with the professor to develop curriculum plans and improve course structure",
             ],
@@ -97,7 +125,7 @@ export default function ExperienceSection() {
                     with Spring Boot, Hibernate and MySQL
                 </span>,
                 "Implemented dynamic content loading and live filtering with jQuery and AJAX",
-                "Wrote 300+ unit tests with JUnit and TestNG; Leveraged Git, GitHub for code management",
+                "Leveraged Git/ GitHub for code management and perform code reviews",
             ],
         },
     ];
