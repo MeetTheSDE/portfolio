@@ -113,7 +113,7 @@ export default function ProjectsSection() {
                                                 aria-label={`Live demo of ${project.title}`}
                                             >
                                                 <ExternalLink className="h-6 w-6" />
-                                                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-md whitespace-nowrap">
+                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-full whitespace-nowrap">
                                                     Live Demo
                                                 </span>
                                             </a>
@@ -127,7 +127,7 @@ export default function ProjectsSection() {
                                                 aria-label={`GitHub repository for ${project.title}`}
                                             >
                                                 <Github className="h-6 w-6" />
-                                                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-md whitespace-nowrap">
+                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-full whitespace-nowrap">
                                                     GitHub
                                                 </span>
                                             </a>
