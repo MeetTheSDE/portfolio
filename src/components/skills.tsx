@@ -83,7 +83,7 @@ export default function Skills() {
     ];
 
     return (
-        <section id="skills" className="py-20 bg-background dark:bg-background">
+        <section id="skills" className="py-10 bg-background dark:bg-background">
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -133,8 +133,7 @@ export default function Skills() {
                     `}
                 </style>
 
-                {/* Infinite Scrolling Skill Bar */}
-                <div className="relative w-full mx-auto overflow-hidden mt-8 py-10 skill-bar-container">
+                <div className="relative w-full mx-auto overflow-hidden mt-8 pt-2.5 pb-10 skill-bar-container">
                     <div className="flex animate-scroll-left whitespace-nowrap w-max">
                         {[...skills, ...skills].map((skill, index) => (
                             <div

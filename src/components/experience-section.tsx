@@ -55,22 +55,25 @@ export default function ExperienceSection() {
                     >
                         Audience Channel Engagement
                     </a>{" "}
-                    for publishers and digital media companies
+                    for publishers and digital media companies.{" "}
+                    <span className="block">
+                        Led{" "}
+                        <a
+                            href="https://www.omeda.com/lp/stripe-integration/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="no-underline text-primary underline hover:text-primary/80"
+                        >
+                            Stripe
+                        </a>{" "}
+                        Payment Gateway integration with AWS Lambda for
+                        real-time billing & webhooks.
+                        <span className="block">
+                            Built access control dashboards, audience & data
+                            management tools, and configuration tools.
+                        </span>
+                    </span>
                 </span>,
-                <span>
-                    Integrated{" "}
-                    <a
-                        href="https://www.omeda.com/lp/stripe-integration/"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="no-underline text-primary underline hover:text-primary/80"
-                    >
-                        Stripe Payment Gateway
-                    </a>{" "}
-                    with AWS Lambda for real-time billing & webhooks
-                </span>,
-                "Built access control dashboards, audience & data management tools, and configuration tools",
-                "Designed and maintained comprehensive unit and integration test suites",
             ],
         },
         {
@@ -87,9 +90,18 @@ export default function ExperienceSection() {
                 "Assignment Design & Grading",
             ],
             achievements: [
-                "Mentored 60+ students and provided individualized support on course topics",
-                "Created and graded assignments, ensuring fair evaluation aligned with course objectives",
-                "Collaborated with the professor to develop curriculum plans and improve course structure",
+                <span>
+                    Mentored 60+ students and provided individualized support on
+                    course topics.
+                    <span className="block">
+                        Created and graded assignments, ensuring fair evaluation
+                        aligned with course objectives.
+                        <span className="block">
+                            Collaborated with the professor to develop
+                            curriculum plans and improve course structure.
+                        </span>
+                    </span>
+                </span>,
             ],
         },
         {
@@ -112,7 +124,7 @@ export default function ExperienceSection() {
             ],
             achievements: [
                 <span>
-                    Developed a full featured{" "}
+                    Developed responsive front-end features for a{" "}
                     <a
                         href="https://www.sculptsoft.com/case-studies/real-estate-property-marketplace/
 "
@@ -121,11 +133,13 @@ export default function ExperienceSection() {
                         className="no-underline text-primary underline hover:text-primary/80"
                     >
                         real estate platform
-                    </a>{" "}
-                    with Spring Boot, Hibernate and MySQL
+                    </a>
+                    , focusing on performance and seamless interactivity. Worked
+                    on early adoption of React components and enhanced user
+                    experience through dynamic content loading and real-time
+                    filtering. Collaborated closely with design and backend
+                    teams to build smooth, scalable UI flows.
                 </span>,
-                "Implemented dynamic content loading and live filtering with jQuery and AJAX",
-                "Leveraged Git/ GitHub for code management and perform code reviews",
             ],
         },
     ];
@@ -133,7 +147,7 @@ export default function ExperienceSection() {
     return (
         <section
             id="experience"
-            className="py-20 bg-background dark:bg-background"
+            className="py-10 bg-background dark:bg-background"
             // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_60%,hsl(var(--muted))_100%)]"
         >
             {" "}
@@ -197,7 +211,7 @@ export default function ExperienceSection() {
                                                         key={achIndex}
                                                         className="flex items-start"
                                                     >
-                                                        <CheckCircle className="h- w-5 text-primary mr-3 mt-1 flex-shrink-0" />
+                                                        {/* <CheckCircle className="h- w-5 text-primary mr-3 mt-1 flex-shrink-0" /> */}
                                                         <span>
                                                             {achievement}
                                                         </span>
@@ -205,7 +219,7 @@ export default function ExperienceSection() {
                                                 )
                                             )}
                                         </ul>
-                                        <div className="flex flex-wrap gap-2 mb-4">
+                                        <div className="flex flex-wrap gap-2">
                                             {experience.technologies.map(
                                                 (tech) => (
                                                     <Badge

@@ -27,7 +27,7 @@ export default function EducationSection() {
     return (
         <section
             id="education"
-            className="py-20 bg-background dark:bg-background"
+            className="py-10 bg-background dark:bg-background"
             // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_50%,hsl(var(--background))_80%,hsl(var(--muted))_100%)]"
         >
             {" "}
@@ -56,7 +56,7 @@ export default function EducationSection() {
                                         dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
                                         "
                         >
-                            <div className="mb-6">
+                            <div>
                                 <div className="flex justify-between items-center mb-4">
                                     <span className="text-muted-foreground">
                                         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center dark:bg-primary/20">
@@ -96,7 +96,7 @@ export default function EducationSection() {
                                         <SquareArrowOutUpRight className="h-4 w-4 ml-1 flex-shrink-0" />
                                     </a>
                                 </p>
-                                <p className="text-muted-foreground mb-1">
+                                <p className="text-muted-foreground">
                                     GPA: {edu.gpa}
                                 </p>
                             </div>

@@ -66,7 +66,7 @@ export default function ProjectsSection() {
     return (
         <section
             id="projects"
-            className="py-20 bg-background dark:bg-background"
+            className="py-10 bg-background dark:bg-background"
             // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_30%,hsl(var(--muted))_100%)]"
         >
             {" "}
@@ -97,14 +97,14 @@ export default function ProjectsSection() {
                                         dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
                                         "
                         >
-                            <div className="mb-6">
+                            <div>
                                 <h3 className="text-2xl font-semibold text-foreground mb-3">
                                     {project.title}
                                 </h3>
                                 <p className="text-muted-foreground mb-4 leading-relaxed whitespace-pre-line">
                                     {project.description}
                                 </p>
-                                <div className="flex flex-wrap gap-2 mb-4">
+                                <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech) => (
                                         <Badge
                                             key={tech}
