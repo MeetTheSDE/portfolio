@@ -7,9 +7,13 @@ export default function Navigation() {
         const savedMode = localStorage.getItem("darkMode");
         return savedMode === "true" ? true : false;
     });
-    const [activeSection, setActiveSection] = useState("#hero");
+    const [activeSection, setActiveSection] = useState<string | null>(null);
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const navLinksRef = useRef<HTMLDivElement>(null);
+
+    useEffect(() => {
+        setActiveSection("#hero");
+    }, []);
 
     useEffect(() => {
         if (darkMode) {
