@@ -67,9 +67,7 @@ export default function ProjectsSection() {
         <section
             id="projects"
             className="py-10 bg-background dark:bg-background"
-            // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_30%,hsl(var(--muted))_100%)]"
         >
-            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -83,14 +81,12 @@ export default function ProjectsSection() {
                         <motion.div
                             key={project.title}
                             layout
-                            // initial={{ opacity: 0.9, y: 30 }}
                             initial={{
                                 opacity: 0.9,
                                 x: index % 2 === 0 ? -50 : 50,
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0, delay: index * 0 }}
-                            // whileHover={{ y: -5 }}
                             className="
                                         bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
                                         select-none cursor-default 
@@ -98,9 +94,46 @@ export default function ProjectsSection() {
                                         "
                         >
                             <div>
-                                <h3 className="text-2xl font-semibold text-foreground mb-3">
-                                    {project.title}
-                                </h3>
+                                <div className="flex items-center justify-between mb-3">
+                                    <h3 className="text-2xl font-semibold text-foreground">
+                                        {project.title}
+                                    </h3>
+                                    <div className="flex items-center gap-2">
+                                        {project.liveDemo && (
+                                            <a
+                                                href={project.liveDemo}
+                                                target={
+                                                    project.title ===
+                                                    "Personal Portfolio"
+                                                        ? "_self"
+                                                        : "_blank"
+                                                }
+                                                rel="noopener noreferrer"
+                                                className="relative group text-primary hover:text-primary/80 transition-colors"
+                                                aria-label={`Live demo of ${project.title}`}
+                                            >
+                                                <ExternalLink className="h-6 w-6" />
+                                                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-md whitespace-nowrap">
+                                                    Live Demo
+                                                </span>
+                                            </a>
+                                        )}
+                                        {project.github && (
+                                            <a
+                                                href={project.github}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="relative group text-muted-foreground hover:text-primary transition-colors"
+                                                aria-label={`GitHub repository for ${project.title}`}
+                                            >
+                                                <Github className="h-6 w-6" />
+                                                <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-md whitespace-nowrap">
+                                                    GitHub
+                                                </span>
+                                            </a>
+                                        )}
+                                    </div>
+                                </div>
                                 <p className="text-muted-foreground mb-4 leading-relaxed whitespace-pre-line">
                                     {project.description}
                                 </p>
@@ -115,40 +148,6 @@ export default function ProjectsSection() {
                                         </Badge>
                                     ))}
                                 </div>
-                            </div>
-                            <div className="flex flex-wrap gap-4 mt-6">
-                                {project.github && (
-                                    <motion.a
-                                        href={project.github}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.03 }}
-                                        whileTap={{ scale: 0.97 }}
-                                        className="bg-primary text-primary-foreground px-4 py-2 rounded-lg hover:bg-primary/90 transition-colors flex items-center gap-2 no-underline"
-                                    >
-                                        <Github className="h-4 w-4" />
-                                        GitHub
-                                    </motion.a>
-                                )}
-
-                                {project.liveDemo && (
-                                    <motion.a
-                                        href={project.liveDemo}
-                                        target={
-                                            project.title ===
-                                            "Personal Portfolio"
-                                                ? "_self"
-                                                : "_blank"
-                                        }
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.03 }}
-                                        whileTap={{ scale: 0.97 }}
-                                        className="border border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors flex items-center gap-2 no-underline"
-                                    >
-                                        <ExternalLink className="h-4 w-4" />
-                                        Live Demo
-                                    </motion.a>
-                                )}
                             </div>
                         </motion.div>
                     ))}
