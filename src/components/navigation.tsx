@@ -77,10 +77,16 @@ export default function Navigation() {
 
     const handleLinkClick = (href: string) => {
         const element = document.querySelector(href);
+        const navHeight = 48;
+
         if (element) {
-            element.scrollIntoView({
+            const elementPosition =
+                element.getBoundingClientRect().top + window.scrollY;
+            const offsetPosition = elementPosition - navHeight;
+
+            window.scrollTo({
+                top: offsetPosition,
                 behavior: "smooth",
-                block: "start",
             });
         }
         setIsMobileMenuOpen(false);

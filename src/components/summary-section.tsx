@@ -30,20 +30,27 @@ export default function SummarySection() {
                                 Software Engineering Expertise
                             </h3>
                             <p className="text-muted-foreground mb-6 leading-relaxed">
-                                Software Engineer with <strong>3+ years</strong>{" "}
-                                at Omeda, built secure, scalable backend systems
-                                using Java, J2EE, JAX-RS, Spring Boot,
-                                JavaScript, SQL, AWS, and led API development
-                                and integrations.
-                                <br />
-                                Academically, applied Python, Django, Flask,
-                                AWS, and core ML concepts through diverse
-                                projects that sharpened my problem-solving
-                                skills.
-                                <br />
-                                Comfortable building frontend features with
-                                React and TypeScript, while actively using
-                                Python daily to power backend logic and tooling.
+                                <span>
+                                    I’m a Software Engineer with{" "}
+                                    <strong>3.5 years of experience</strong> at
+                                    Omeda, where I focused on building reliable
+                                    and scalable systems that support core
+                                    business needs. I led feature development,
+                                    improved performance, and integrated
+                                    external platforms to enhance product
+                                    capabilities.
+                                    <span className="block mt-2">
+                                        During my academic journey, I explored
+                                        projects that built my critical thinking
+                                        and foundation in software development.
+                                        <span className="block mt-2">
+                                            At my core, I’m curious, eager to
+                                            improve, and passionate about
+                                            creating things that make a
+                                            difference.
+                                        </span>
+                                    </span>
+                                </span>
                             </p>
                             <div className="grid grid-cols-2 gap-4">
                                 <div className="flex items-center">
