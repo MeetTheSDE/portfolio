@@ -10,6 +10,7 @@ export default function Navigation() {
     const [activeSection, setActiveSection] = useState<string | null>(null);
     const [showScrollToTop, setShowScrollToTop] = useState(false);
     const navLinksRef = useRef<HTMLDivElement>(null);
+    const [isScrollingToSection, setIsScrollingToSection] = useState(false);
 
     useEffect(() => {
         setActiveSection("#hero");
@@ -25,6 +26,10 @@ export default function Navigation() {
     }, [darkMode]);
 
     useEffect(() => {
+        if (isScrollingToSection) {
+            return;
+        }
+
         const sections = document.querySelectorAll("section[id]");
         const observer = new IntersectionObserver(
             (entries) => {
@@ -57,7 +62,7 @@ export default function Navigation() {
                 observer.unobserve(section);
             });
         };
-    }, []);
+    }, [isScrollingToSection]);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -78,6 +83,8 @@ export default function Navigation() {
     const handleLinkClick = (href: string) => {
         const element = document.querySelector(href);
         const navHeight = 48;
+        setIsScrollingToSection(true);
+        setActiveSection(href);
 
         if (element) {
             const elementPosition =
@@ -88,9 +95,12 @@ export default function Navigation() {
                 top: offsetPosition,
                 behavior: "smooth",
             });
+
+            setTimeout(() => {
+                setIsScrollingToSection(false);
+            }, 800);
         }
         setIsMobileMenuOpen(false);
-        setActiveSection(href);
     };
 
     const handleScrollToTop = () => {
@@ -158,7 +168,7 @@ export default function Navigation() {
                             ref={navLinksRef}
                         >
                             <div
-                                className="absolute z-0 bg-primary/10 dark:bg-primary/20 rounded-lg transition-all duration-300 ease-in-out shadow-sm"
+                                className="absolute z-0 bg-primary/10 dark:bg-primary/20 rounded-lg transition-transform duration-300 ease-in-out shadow-sm"
                                 style={{
                                     width: floatingBoxProperties.width,
                                     height: floatingBoxProperties.height,
