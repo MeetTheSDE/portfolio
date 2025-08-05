@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { CustomBadge } from "@/components/custom-ui/custom-badge";
+import { CardStyle } from "@/components/custom-ui/custom-card";
 
 export default function ExperienceSection() {
     const experiences = [
@@ -181,13 +182,7 @@ export default function ExperienceSection() {
                                     </div>
                                 </div>
                                 <div className="md:w-3/4 md:pl-8 select-none cursor-default">
-                                    <div
-                                        className="
-                                        bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
-                                        select-none cursor-default 
-                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
-                                        "
-                                    >
+                                    <div className={CardStyle}>
                                         <h3 className="text-2xl font-semibold text-foreground mb-2">
                                             {experience.title}
                                         </h3>
@@ -222,13 +217,9 @@ export default function ExperienceSection() {
                                         <div className="flex flex-wrap gap-2">
                                             {experience.technologies.map(
                                                 (tech) => (
-                                                    <Badge
-                                                        key={tech}
-                                                        variant="secondary"
-                                                        className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
-                                                    >
+                                                    <CustomBadge key={tech}>
                                                         {tech}
-                                                    </Badge>
+                                                    </CustomBadge>
                                                 )
                                             )}
                                         </div>

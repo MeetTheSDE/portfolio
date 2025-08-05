@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
+import { CardStyle } from "@/components/custom-ui/custom-card";
 
 export default function SummarySection() {
     return (
@@ -19,12 +20,7 @@ export default function SummarySection() {
 
                 <div className="grid md:grid-cols-2 gap-12 items-center section-fade cursor-default select-none">
                     <div>
-                        <div
-                            className="bg-card p-8 rounded-2xl shadow-xl hover:shadow-md card-hover transition-all duration-200
-                                        select-none cursor-default 
-                                        dark:bg-card dark:shadow-xl dark:hover:shadow-xl dark:border dark:border-border
-                                        "
-                        >
+                        <div className={CardStyle}>
                             {" "}
                             <h3 className="text-2xl font-semibold text-foreground mb-4">
                                 Software Engineering Expertise

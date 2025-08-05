@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { GraduationCap, SquareArrowOutUpRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { CustomBadge } from "@/components/custom-ui/custom-badge";
+import { CardStyle } from "@/components/custom-ui/custom-card";
 
 export default function EducationSection() {
     const education = [
@@ -50,11 +51,7 @@ export default function EducationSection() {
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.0, delay: index * 0.0 }}
                             // whileHover={{ y: -5 }}
-                            className="
-                                        bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
-                                        select-none cursor-default 
-                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
-                                        "
+                            className={CardStyle}
                         >
                             <div>
                                 <div className="flex justify-between items-center mb-4">
@@ -66,18 +63,10 @@ export default function EducationSection() {
                                     </span>
 
                                     <span className="flex flex-col items-end gap-1">
-                                        <Badge
-                                            variant="secondary"
-                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
-                                        >
-                                            {edu.type}
-                                        </Badge>
-                                        <Badge
-                                            variant="secondary"
-                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
-                                        >
+                                        <CustomBadge>{edu.type}</CustomBadge>
+                                        <CustomBadge>
                                             {edu.duration}
-                                        </Badge>
+                                        </CustomBadge>
                                     </span>
                                 </div>
 

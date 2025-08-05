@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
+import { CustomBadge } from "@/components/custom-ui/custom-badge";
+import { CardStyle } from "@/components/custom-ui/custom-card";
 
 export default function ProjectsSection() {
     const projects = [
@@ -87,11 +88,7 @@ export default function ProjectsSection() {
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0, delay: index * 0 }}
-                            className="
-                                        bg-card p-8 rounded-2xl shadow-lg hover:shadow-md card-hover transition-all duration-200
-                                        select-none cursor-default 
-                                        dark:bg-card dark:shadow-lg dark:hover:shadow-xl dark:border dark:border-border
-                                        "
+                            className={CardStyle}
                         >
                             <div>
                                 <div className="flex items-center justify-between mb-3">
@@ -139,13 +136,9 @@ export default function ProjectsSection() {
                                 </p>
                                 <div className="flex flex-wrap gap-2">
                                     {project.technologies.map((tech) => (
-                                        <Badge
-                                            key={tech}
-                                            variant="secondary"
-                                            className="bg-primary/10 text-primary hover:bg-primary/20 cursor-pointer dark:bg-primary/20 dark:text-primary dark:hover:bg-primary/30"
-                                        >
+                                        <CustomBadge key={tech}>
                                             {tech}
-                                        </Badge>
+                                        </CustomBadge>
                                     ))}
                                 </div>
                             </div>
