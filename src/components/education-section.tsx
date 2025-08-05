@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { GraduationCap, SquareArrowOutUpRight } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
+import { SectionStyle } from "./custom-ui/custom-section";
 
 export default function EducationSection() {
     const education = [
@@ -28,7 +29,7 @@ export default function EducationSection() {
     return (
         <section
             id="education"
-            className="py-10 bg-background dark:bg-background"
+            className={SectionStyle}
             // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_50%,hsl(var(--background))_80%,hsl(var(--muted))_100%)]"
         >
             {" "}

@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { useToast } from "@/hooks/use-toast";
+import { SectionStyle } from "./custom-ui/custom-section";
 
 interface ContactFormData {
     name: string;
@@ -84,10 +85,7 @@ export default function ContactSection() {
     ];
 
     return (
-        <section
-            id="contact"
-            className="py-10 bg-background dark:bg-background"
-        >
+        <section id="contact" className={SectionStyle}>
             {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">

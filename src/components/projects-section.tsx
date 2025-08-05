@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
+import { SectionStyle } from "./custom-ui/custom-section";
 
 export default function ProjectsSection() {
     const projects = [
@@ -65,10 +66,7 @@ export default function ProjectsSection() {
     ];
 
     return (
-        <section
-            id="projects"
-            className="py-10 bg-background dark:bg-background"
-        >
+        <section id="projects" className={SectionStyle}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

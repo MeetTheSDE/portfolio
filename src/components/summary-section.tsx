@@ -1,12 +1,13 @@
 import { motion } from "framer-motion";
 import { CheckCircle } from "lucide-react";
 import { CardStyle } from "@/components/custom-ui/custom-card";
+import { SectionStyle } from "./custom-ui/custom-section";
 
 export default function SummarySection() {
     return (
         <section
             id="summary"
-            className="py-10 bg-background dark:bg-background"
+            className={SectionStyle}
             // className="py-20 bg-background dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_50%,hsl(var(--background))_100%)]"
         >
             {" "}

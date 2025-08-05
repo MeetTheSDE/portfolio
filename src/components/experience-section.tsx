@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
+import { SectionStyle } from "@/components/custom-ui/custom-section";
 
 export default function ExperienceSection() {
     const experiences = [
@@ -148,7 +149,7 @@ export default function ExperienceSection() {
     return (
         <section
             id="experience"
-            className="py-10 bg-background dark:bg-background"
+            className={SectionStyle}
             // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_60%,hsl(var(--muted))_100%)]"
         >
             {" "}
