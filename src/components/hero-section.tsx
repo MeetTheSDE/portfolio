@@ -55,7 +55,7 @@ export default function HeroSection() {
                     >
                         <button
                             onClick={handleOpenModal}
-                            className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
+                            className="bg-primary text-primary-foreground px-8 py-3 rounded-2xl hover:bg-primary/90 transition-colors font-medium"
                         >
                             Get In Touch
                         </button>
@@ -63,7 +63,7 @@ export default function HeroSection() {
                             href="/MeetkumarPatel_Resume.pdf"
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="border border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
+                            className="border border-primary text-primary px-8 py-3 rounded-2xl hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
                         >
                             View Resume
                         </a>

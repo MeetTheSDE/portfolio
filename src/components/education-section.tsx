@@ -50,15 +50,16 @@ export default function EducationSection() {
                                 x: index % 2 === 0 ? -50 : 50,
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.0, delay: index * 0.0 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0 }}
                             // whileHover={{ y: -5 }}
+                            viewport={{ once: true }}
                             className={CardStyle}
                         >
                             <div>
                                 <div className="flex justify-between items-center mb-4">
                                     <span className="text-muted-foreground">
                                         <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center dark:bg-primary/20">
-                                            {" "}
                                             <GraduationCap className="h-8 w-8 text-primary" />
                                         </div>
                                     </span>

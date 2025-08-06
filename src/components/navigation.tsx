@@ -168,7 +168,7 @@ export default function Navigation() {
                             ref={navLinksRef}
                         >
                             <div
-                                className="absolute z-0 bg-primary/10 dark:bg-primary/20 rounded-lg transition-transform duration-300 ease-in-out shadow-sm"
+                                className="absolute z-0 bg-primary/10 dark:bg-primary/20 rounded-2xl transition-transform duration-300 ease-in-out shadow-sm"
                                 style={{
                                     width: floatingBoxProperties.width,
                                     height: floatingBoxProperties.height,

@@ -81,7 +81,7 @@ export default function SummarySection() {
                     <div className="space-y-6 cursor-default select-none">
                         <motion.div
                             whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-r from-primary to-accent p-6 rounded-xl text-primary-foreground"
+                            className="bg-gradient-to-r from-primary to-accent p-6 rounded-2xl text-primary-foreground"
                         >
                             <h4 className="text-xl font-semibold mb-2">
                                 3+ Years Professional Experience
@@ -93,7 +93,7 @@ export default function SummarySection() {
                         </motion.div>
                         <motion.div
                             whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-r from-accent to-primary p-6 rounded-xl text-primary-foreground"
+                            className="bg-gradient-to-r from-accent to-primary p-6 rounded-2xl text-primary-foreground"
                         >
                             <h4 className="text-xl font-semibold mb-2">
                                 Java, JavaScript, JAX-RS, J2EE, SQL, React, AWS
@@ -104,7 +104,7 @@ export default function SummarySection() {
                         </motion.div>
                         <motion.div
                             whileHover={{ scale: 1.02 }}
-                            className="bg-gradient-to-r from-primary to-accent p-6 rounded-xl text-primary-foreground"
+                            className="bg-gradient-to-r from-primary to-accent p-6 rounded-2xl text-primary-foreground"
                         >
                             <h4 className="text-xl font-semibold mb-2">
                                 Python, Django, TypeScript, React

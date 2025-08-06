@@ -168,6 +168,7 @@ export default function ExperienceSection() {
                             initial={{ opacity: 0, x: -50 }}
                             whileInView={{ opacity: 1, x: 0 }}
                             transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
                             className="relative group"
                         >
                             <div className="md:flex items-start">
@@ -177,7 +178,7 @@ export default function ExperienceSection() {
                                             experience.current
                                                 ? "bg-primary"
                                                 : "bg-muted-foreground dark:bg-muted"
-                                        } text-white px-4 py-2 rounded-lg text-sm font-medium inline-block dark:text-primary-foreground`}
+                                        } text-white px-4 py-2 rounded-2xl text-sm font-medium inline-block dark:text-primary-foreground`}
                                     >
                                         {experience.period}
                                     </div>

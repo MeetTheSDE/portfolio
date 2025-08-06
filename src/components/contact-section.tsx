@@ -135,7 +135,7 @@ export default function ContactSection() {
                                         <a
                                             key={info.label}
                                             href={info.link}
-                                            className="block hover:bg-muted p-2 rounded-lg transition-colors dark:hover:bg-muted"
+                                            className="block hover:bg-muted p-2 rounded-2xl transition-colors dark:hover:bg-muted"
                                             {...(info.label === "LinkedIn" && {
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -146,7 +146,7 @@ export default function ContactSection() {
                                     ) : (
                                         <div
                                             key={info.label}
-                                            className="block hover:bg-muted p-2 rounded-lg transition-colors dark:hover:bg-muted"
+                                            className="block hover:bg-muted p-2 rounded-2xl transition-colors dark:hover:bg-muted"
                                         >
                                             {content}
                                         </div>

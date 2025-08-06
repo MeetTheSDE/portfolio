@@ -142,7 +142,7 @@ export default function Skills() {
                                 key={`skill-${index}`}
                                 className="relative flex flex-col items-center justify-center
                                            px-6 py-3 mr-6 flex-shrink-0 group
-                                           bg-muted rounded-xl
+                                           bg-muted rounded-2xl
                                            border border-transparent transform hover:scale-125 transition-transform duration-300 ease-in-out"
                             >
                                 <img

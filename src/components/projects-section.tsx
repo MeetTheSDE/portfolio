@@ -85,7 +85,9 @@ export default function ProjectsSection() {
                                 x: index % 2 === 0 ? -50 : 50,
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0, delay: index * 0 }}
+                            whileHover={{ scale: 1.02 }}
+                            transition={{ duration: 0 }}
+                            viewport={{ once: true }}
                             className={CardStyle}
                         >
                             <div>
@@ -108,7 +110,7 @@ export default function ProjectsSection() {
                                                 aria-label={`Live demo of ${project.title}`}
                                             >
                                                 <ExternalLink className="h-6 w-6" />
-                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-full whitespace-nowrap">
+                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-2xl whitespace-nowrap">
                                                     Live Demo
                                                 </span>
                                             </a>
@@ -122,7 +124,7 @@ export default function ProjectsSection() {
                                                 aria-label={`GitHub repository for ${project.title}`}
                                             >
                                                 <Github className="h-6 w-6" />
-                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-full whitespace-nowrap">
+                                                <span className="absolute bottom-full bg-muted-foreground dark:bg-muted left-1/2 -translate-x-1/2 mb-1 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-gray-800 text-white text-xs py-1 px-2 rounded-2xl whitespace-nowrap">
                                                     GitHub
                                                 </span>
                                             </a>
