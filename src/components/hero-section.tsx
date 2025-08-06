@@ -1,15 +1,17 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { Github, Linkedin } from "lucide-react";
+import ContactForm from "./contact-form";
 
 export default function HeroSection() {
-    const handleScrollToContact = () => {
-        const element = document.querySelector("#contact");
-        if (element) {
-            element.scrollIntoView({
-                behavior: "smooth",
-                block: "start",
-            });
-        }
+    const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+    const handleOpenModal = () => {
+        setIsContactFormOpen(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsContactFormOpen(false);
     };
 
     return (
@@ -52,7 +54,7 @@ export default function HeroSection() {
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center"
                     >
                         <button
-                            onClick={handleScrollToContact}
+                            onClick={handleOpenModal}
                             className="bg-primary text-primary-foreground px-8 py-3 rounded-lg hover:bg-primary/90 transition-colors font-medium"
                         >
                             Get In Touch
@@ -99,6 +101,11 @@ export default function HeroSection() {
                     </div>
                 </motion.div>
             </div>
+
+            <ContactForm
+                isOpen={isContactFormOpen}
+                onClose={handleCloseModal}
+            />
         </section>
     );
 }
