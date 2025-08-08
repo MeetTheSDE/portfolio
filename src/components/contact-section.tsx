@@ -94,7 +94,7 @@ export default function ContactSection() {
                     <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-16 section-fade">
+                <div className="grid md:grid-cols-2 gap-12 section-fade">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
@@ -154,7 +154,7 @@ export default function ContactSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-muted p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
+                        className="bg-card p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
                     >
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message
