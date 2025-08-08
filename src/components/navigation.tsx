@@ -150,7 +150,7 @@ export default function Navigation() {
 
     return (
         <>
-            <nav className="fixed top-0 w-full bg-white/95 backdrop-blur-sm z-50 shadow-sm dark:bg-background/95">
+            <nav className="fixed top-0 w-full bg-background backdrop-blur-sm z-50 dark:bg-background">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="flex justify-between items-center h-16">
                         <div className="flex-shrink-0">

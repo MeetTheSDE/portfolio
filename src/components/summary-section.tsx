@@ -10,7 +10,6 @@ export default function SummarySection() {
             className={SectionStyle}
             // className="py-20 bg-background dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_50%,hsl(var(--background))_100%)]"
         >
-            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -22,7 +21,6 @@ export default function SummarySection() {
                 <div className="grid md:grid-cols-2 gap-12 items-center section-fade cursor-default select-none">
                     <div>
                         <div className={CardStyle}>
-                            {" "}
                             <h3 className="text-2xl font-semibold text-foreground mb-4">
                                 Software Engineering Expertise
                             </h3>

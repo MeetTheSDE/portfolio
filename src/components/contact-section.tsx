@@ -86,29 +86,22 @@ export default function ContactSection() {
 
     return (
         <section id="contact" className={SectionStyle}>
-            {" "}
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
                         Get In Touch
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-                    {/* <p className="text-muted-foreground max-w-2xl mx-auto">
-                        I'm always open to discussing new opportunities,
-                        interesting projects, or just having a great
-                        conversation about technology.
-                    </p> */}
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-12 section-fade">
+                <div className="grid md:grid-cols-2 gap-16 section-fade">
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="space-y-8"
                     >
-                        <div>
+                        <div className="bg-card p-8 rounded-2xl dark:bg-card dark:border dark:border-border">
                             <h3 className="text-2xl font-semibold text-foreground mb-6">
                                 Let's Connect
                             </h3>
@@ -118,7 +111,6 @@ export default function ContactSection() {
                                     const content = (
                                         <div className="flex items-center">
                                             <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 dark:bg-primary/20">
-                                                {" "}
                                                 <IconComponent className="h-5 w-5 text-primary" />
                                             </div>
                                             <div>
@@ -136,7 +128,7 @@ export default function ContactSection() {
                                         <a
                                             key={info.label}
                                             href={info.link}
-                                            className="block hover:bg-muted p-2 rounded-2xl transition-colors dark:hover:bg-muted"
+                                            className="block hover:bg-background p-2 rounded-2xl transition-colors dark:hover:bg-background"
                                             {...(info.label === "LinkedIn" && {
                                                 target: "_blank",
                                                 rel: "noopener noreferrer",
@@ -147,7 +139,7 @@ export default function ContactSection() {
                                     ) : (
                                         <div
                                             key={info.label}
-                                            className="block hover:bg-muted p-2 rounded-2xl transition-colors dark:hover:bg-muted"
+                                            className="block hover:bg-background p-2 rounded-2xl transition-colors dark:hover:bg-background"
                                         >
                                             {content}
                                         </div>
@@ -162,7 +154,7 @@ export default function ContactSection() {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
                         viewport={{ once: true }}
-                        className="bg-muted p-8 rounded-2xl dark:bg-muted dark:border dark:border-border"
+                        className="bg-muted p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
                     >
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message

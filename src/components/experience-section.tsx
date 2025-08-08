@@ -177,7 +177,7 @@ export default function ExperienceSection() {
                                         className={`${
                                             experience.current
                                                 ? "bg-primary"
-                                                : "bg-muted-foreground dark:bg-muted"
+                                                : "bg-muted-foreground dark:bg-card"
                                         } text-white px-4 py-2 rounded-2xl text-sm font-medium inline-block dark:text-primary-foreground`}
                                     >
                                         {experience.period}
