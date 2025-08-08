@@ -93,11 +93,11 @@ export default function ContactSection() {
                         Get In Touch
                     </h2>
                     <div className="w-20 h-1 bg-primary mx-auto mb-8"></div>
-                    <p className="text-muted-foreground max-w-2xl mx-auto">
+                    {/* <p className="text-muted-foreground max-w-2xl mx-auto">
                         I'm always open to discussing new opportunities,
                         interesting projects, or just having a great
                         conversation about technology.
-                    </p>
+                    </p> */}
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 section-fade">
@@ -105,6 +105,7 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: -50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
                         className="space-y-8"
                     >
                         <div>
@@ -160,7 +161,8 @@ export default function ContactSection() {
                         initial={{ opacity: 0, x: 50 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.6 }}
-                        className="bg-muted p-8 rounded-2xl dark:bg-background dark:border dark:border-border"
+                        viewport={{ once: true }}
+                        className="bg-muted p-8 rounded-2xl dark:bg-muted dark:border dark:border-border"
                     >
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message
@@ -184,7 +186,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
+                                    className="mt-2 dark:bg-background dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -205,7 +207,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
+                                    className="mt-2 dark:bg-background dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -226,7 +228,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2 dark:bg-input dark:text-foreground dark:border-border"
+                                    className="mt-2 dark:bg-background dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <div>
@@ -238,7 +240,7 @@ export default function ContactSection() {
                                 </Label>
                                 <Textarea
                                     id="message"
-                                    rows={4}
+                                    rows={3}
                                     placeholder="Your message..."
                                     value={formData.message}
                                     onChange={(e) =>
@@ -247,7 +249,7 @@ export default function ContactSection() {
                                             e.target.value
                                         )
                                     }
-                                    className="mt-2 resize-none dark:bg-input dark:text-foreground dark:border-border"
+                                    className="mt-2 resize-none dark:bg-background dark:text-foreground dark:border-border"
                                 />
                             </div>
                             <Button
