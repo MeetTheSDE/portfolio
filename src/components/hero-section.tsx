@@ -60,7 +60,7 @@ export default function HeroSection() {
                             Get In Touch
                         </button>
                         <a
-                            href="/MeetkumarPatel_Resume.pdf"
+                            href="https://drive.google.com/file/d/1PKIznn596fzcHDG4XtO9PaRUgmMvdhj5/view"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="border border-primary text-primary px-8 py-3 rounded-2xl hover:bg-primary hover:text-primary-foreground transition-colors font-medium"
