@@ -95,7 +95,7 @@ export default function ContactForm({ isOpen, onClose }: ContactFormProps) {
                         animate={{ scale: 1, opacity: 1, y: 0 }}
                         exit={{ scale: 0.9, opacity: 0, y: 20 }}
                         transition={{ duration: 0.3 }}
-                        className="relative w-full max-w-lg rounded-2xl bg-muted p-8 shadow-2xl dark:bg-background dark:border dark:border-border"
+                        className="relative w-full max-w-lg rounded-2xl bg-muted p-8 shadow-2xl dark:bg-card dark:border dark:border-border"
                         onClick={(e) => e.stopPropagation()}
                     >
                         <Button
