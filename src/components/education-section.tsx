@@ -49,7 +49,7 @@ export default function EducationSection() {
                                 x: index % 2 === 0 ? -50 : 50,
                             }}
                             whileInView={{ opacity: 1, x: 0 }}
-                            whileHover={{ scale: 1.02 }}
+                            whileHover={{ scale: 1.01 }}
                             transition={{ duration: 0 }}
                             // whileHover={{ y: -5 }}
                             viewport={{ once: true }}
