@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { GraduationCap, SquareArrowOutUpRight } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
@@ -27,11 +26,7 @@ export default function EducationSection() {
     ];
 
     return (
-        <section
-            id="education"
-            className={SectionStyle}
-            // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--background))_50%,hsl(var(--background))_80%,hsl(var(--muted))_100%)]"
-        >
+        <section id="education" className={SectionStyle}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -41,20 +36,8 @@ export default function EducationSection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 section-fade">
-                    {education.map((edu, index) => (
-                        <motion.div
-                            key={edu.degree}
-                            initial={{
-                                opacity: 0.9,
-                                x: index % 2 === 0 ? -50 : 50,
-                            }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            whileHover={{ scale: 1.01 }}
-                            transition={{ duration: 0 }}
-                            // whileHover={{ y: -5 }}
-                            viewport={{ once: true }}
-                            className={CardStyle}
-                        >
+                    {education.map((edu) => (
+                        <div key={edu.degree} className={CardStyle}>
                             <div>
                                 <div className="flex justify-between items-center mb-4">
                                     <span className="text-muted-foreground">
@@ -90,7 +73,7 @@ export default function EducationSection() {
                                     GPA: {edu.gpa}
                                 </p>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

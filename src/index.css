@@ -101,18 +101,6 @@
     .bg-light {
         background-color: hsl(var(--light));
     }
-
-    .card-hover {
-        transition: background-color 0.3s ease;
-    }
-
-    .card-hover:hover {
-        background-color: hsl(var(--card-hover));
-    }
-
-    .dark .card-hover:hover {
-        background-color: hsl(var(--card-hover));
-    }
 }
 
 @layer utilities {

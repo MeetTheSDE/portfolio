@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { ExternalLink, Github } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
@@ -76,20 +75,8 @@ export default function ProjectsSection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-8 section-fade">
-                    {projects.map((project, index) => (
-                        <motion.div
-                            key={project.title}
-                            layout
-                            initial={{
-                                opacity: 0.9,
-                                x: index % 2 === 0 ? -50 : 50,
-                            }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            whileHover={{ scale: 1.01 }}
-                            transition={{ duration: 0 }}
-                            viewport={{ once: true }}
-                            className={CardStyle}
-                        >
+                    {projects.map((project) => (
+                        <div key={project.title} className={CardStyle}>
                             <div>
                                 <div className="flex items-center justify-between mb-3">
                                     <h3 className="text-2xl font-semibold text-foreground">
@@ -142,7 +129,7 @@ export default function ProjectsSection() {
                                     ))}
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
 import { Mail, Phone, MapPin, Linkedin, Send } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -95,67 +94,54 @@ export default function ContactSection() {
                 </div>
 
                 <div className="grid md:grid-cols-2 gap-12 section-fade">
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                    >
-                        <div className="bg-card p-8 rounded-2xl dark:bg-card dark:border dark:border-border">
-                            <h3 className="text-2xl font-semibold text-foreground mb-6">
-                                Let's Connect
-                            </h3>
-                            <div className="space-y-4">
-                                {contactInfo.map((info) => {
-                                    const IconComponent = info.icon;
-                                    const content = (
-                                        <div className="flex items-center">
-                                            <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 dark:bg-primary/20">
-                                                <IconComponent className="h-5 w-5 text-primary" />
-                                            </div>
-                                            <div>
-                                                <p className="text-muted-foreground text-sm">
-                                                    {info.label}
-                                                </p>
-                                                <p className="font-medium text-foreground">
-                                                    {info.value}
-                                                </p>
-                                            </div>
+                    <div className="bg-card h-fit p-8 rounded-2xl dark:bg-card dark:border dark:border-border">
+                        <h3 className="text-2xl font-semibold text-foreground mb-6">
+                            Let's Connect
+                        </h3>
+                        <div className="space-y-4">
+                            {contactInfo.map((info) => {
+                                const IconComponent = info.icon;
+                                const content = (
+                                    <div className="flex items-center">
+                                        <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mr-4 dark:bg-primary/20">
+                                            <IconComponent className="h-5 w-5 text-primary" />
                                         </div>
-                                    );
+                                        <div>
+                                            <p className="text-muted-foreground text-sm">
+                                                {info.label}
+                                            </p>
+                                            <p className="font-medium text-foreground">
+                                                {info.value}
+                                            </p>
+                                        </div>
+                                    </div>
+                                );
 
-                                    return info.link ? (
-                                        <a
-                                            key={info.label}
-                                            href={info.link}
-                                            className="block hover:bg-background p-2 rounded-2xl transition-colors dark:hover:bg-background"
-                                            {...(info.label === "LinkedIn" && {
-                                                target: "_blank",
-                                                rel: "noopener noreferrer",
-                                            })}
-                                        >
-                                            {content}
-                                        </a>
-                                    ) : (
-                                        <div
-                                            key={info.label}
-                                            className="block hover:bg-background p-2 rounded-2xl transition-colors dark:hover:bg-background"
-                                        >
-                                            {content}
-                                        </div>
-                                    );
-                                })}
-                            </div>
+                                return info.link ? (
+                                    <a
+                                        key={info.label}
+                                        href={info.link}
+                                        className="block p-2 rounded-2xl transition-colors hover:bg-background"
+                                        {...(info.label === "LinkedIn" && {
+                                            target: "_blank",
+                                            rel: "noopener noreferrer",
+                                        })}
+                                    >
+                                        {content}
+                                    </a>
+                                ) : (
+                                    <div
+                                        key={info.label}
+                                        className="block p-2 rounded-2xl transition-colors hover:bg-background"
+                                    >
+                                        {content}
+                                    </div>
+                                );
+                            })}
                         </div>
-                    </motion.div>
+                    </div>
 
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="bg-card p-8 rounded-2xl dark:bg-card dark:border dark:border-border"
-                    >
+                    <div className="bg-card p-8 rounded-2xl dark:bg-card dark:border dark:border-border">
                         <h3 className="text-2xl font-semibold text-foreground mb-6">
                             Send a Message
                         </h3>
@@ -259,7 +245,7 @@ export default function ContactSection() {
                                 )}
                             </Button>
                         </form>
-                    </motion.div>
+                    </div>
                 </div>
             </div>
         </section>

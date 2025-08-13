@@ -5,11 +5,7 @@ import { SectionStyle } from "./custom-ui/custom-section";
 
 export default function SummarySection() {
     return (
-        <section
-            id="summary"
-            className={SectionStyle}
-            // className="py-20 bg-background dark:bg-[linear-gradient(to_bottom,hsl(var(--muted))_0%,hsl(var(--muted))_50%,hsl(var(--background))_100%)]"
-        >
+        <section id="summary" className={SectionStyle}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">

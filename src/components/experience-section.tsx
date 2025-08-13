@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { SquareArrowOutUpRight } from "lucide-react";
 import { CustomBadge } from "@/components/custom-ui/custom-badge";
 import { CardStyle } from "@/components/custom-ui/custom-card";
@@ -147,12 +146,7 @@ export default function ExperienceSection() {
     ];
 
     return (
-        <section
-            id="experience"
-            className={SectionStyle}
-            // className="py-20 bg-light dark:bg-[linear-gradient(to_bottom,hsl(var(--background))_0%,hsl(var(--muted))_60%,hsl(var(--muted))_100%)]"
-        >
-            {" "}
+        <section id="experience" className={SectionStyle}>
             <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16 section-fade">
                     <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
@@ -163,12 +157,8 @@ export default function ExperienceSection() {
 
                 <div className="space-y-12 section-fade">
                     {experiences.map((experience) => (
-                        <motion.div
+                        <div
                             key={experience.company}
-                            initial={{ opacity: 0, x: -50 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ duration: 0.6 }}
-                            viewport={{ once: true }}
                             className="relative group"
                         >
                             <div className="md:flex items-start">
@@ -228,7 +218,7 @@ export default function ExperienceSection() {
                                     </div>
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ))}
                 </div>
             </div>
