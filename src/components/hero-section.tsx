@@ -28,8 +28,7 @@ export default function HeroSection() {
                     transition={{ duration: 0.8, ease: "easeOut" }}
                 >
                     <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
-                        Hi, I'm{" "}
-                        <span className="text-primary">Meetkumar Patel</span>
+                        Hi, I'm <span className="text-primary">Meet Patel</span>
                     </h1>
                     <motion.p
                         initial={{ opacity: 0 }}
